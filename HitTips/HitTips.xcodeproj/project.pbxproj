@@ -9,23 +9,49 @@
 /* Begin PBXBuildFile section */
 		C9AE22C224CBF549003290A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22C124CBF549003290A0 /* AppDelegate.swift */; };
 		C9AE22C424CBF549003290A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22C324CBF549003290A0 /* SceneDelegate.swift */; };
-		C9AE22C624CBF549003290A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22C524CBF549003290A0 /* ViewController.swift */; };
 		C9AE22C924CBF549003290A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AE22C724CBF549003290A0 /* Main.storyboard */; };
 		C9AE22CC24CBF549003290A0 /* HitTips.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22CA24CBF549003290A0 /* HitTips.xcdatamodeld */; };
 		C9AE22CE24CBF54B003290A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9AE22CD24CBF54B003290A0 /* Assets.xcassets */; };
 		C9AE22D124CBF54B003290A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AE22CF24CBF54B003290A0 /* LaunchScreen.storyboard */; };
+		C9AE22DD24CBF75B003290A0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22DC24CBF75B003290A0 /* MainViewController.swift */; };
+		C9AE22DF24CBF8FE003290A0 /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22DE24CBF8FE003290A0 /* AlertMessages.swift */; };
+		C9AE22E824CBF90D003290A0 /* TipRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22E024CBF90D003290A0 /* TipRepresentation.swift */; };
+		C9AE22E924CBF90D003290A0 /* Tips.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22E124CBF90D003290A0 /* Tips.swift */; };
+		C9AE22EA24CBF90D003290A0 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22E224CBF90D003290A0 /* CoreDataStack.swift */; };
+		C9AE22EB24CBF90D003290A0 /* TipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22E324CBF90D003290A0 /* TipController.swift */; };
+		C9AE22EC24CBF90D003290A0 /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22E424CBF90D003290A0 /* Date+Formatter.swift */; };
+		C9AE22ED24CBF90D003290A0 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22E524CBF90D003290A0 /* Comments.swift */; };
+		C9AE22EE24CBF90D003290A0 /* Tip+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22E624CBF90D003290A0 /* Tip+Convenience.swift */; };
+		C9AE22EF24CBF90D003290A0 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22E724CBF90D003290A0 /* Tip.swift */; };
+		C9AE22F124CBF914003290A0 /* Tip+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22F024CBF914003290A0 /* Tip+Codable.swift */; };
+		C9AE22F524CBF988003290A0 /* TipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22F224CBF988003290A0 /* TipDetailViewController.swift */; };
+		C9AE22F624CBF988003290A0 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22F324CBF988003290A0 /* HistoryTableViewController.swift */; };
+		C9AE22F724CBF988003290A0 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22F424CBF988003290A0 /* HistoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C9AE22BE24CBF549003290A0 /* HitTips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitTips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AE22C124CBF549003290A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9AE22C324CBF549003290A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C9AE22C524CBF549003290A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C9AE22C824CBF549003290A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C9AE22CB24CBF549003290A0 /* HitTips.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HitTips.xcdatamodel; sourceTree = "<group>"; };
 		C9AE22CD24CBF54B003290A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9AE22D024CBF54B003290A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9AE22D224CBF54B003290A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9AE22DC24CBF75B003290A0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C9AE22DE24CBF8FE003290A0 /* AlertMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertMessages.swift; sourceTree = "<group>"; };
+		C9AE22E024CBF90D003290A0 /* TipRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipRepresentation.swift; sourceTree = "<group>"; };
+		C9AE22E124CBF90D003290A0 /* Tips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tips.swift; sourceTree = "<group>"; };
+		C9AE22E224CBF90D003290A0 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		C9AE22E324CBF90D003290A0 /* TipController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipController.swift; sourceTree = "<group>"; };
+		C9AE22E424CBF90D003290A0 /* Date+Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
+		C9AE22E524CBF90D003290A0 /* Comments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
+		C9AE22E624CBF90D003290A0 /* Tip+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tip+Convenience.swift"; sourceTree = "<group>"; };
+		C9AE22E724CBF90D003290A0 /* Tip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
+		C9AE22F024CBF914003290A0 /* Tip+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tip+Codable.swift"; sourceTree = "<group>"; };
+		C9AE22F224CBF988003290A0 /* TipDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipDetailViewController.swift; sourceTree = "<group>"; };
+		C9AE22F324CBF988003290A0 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		C9AE22F424CBF988003290A0 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +84,61 @@
 		C9AE22C024CBF549003290A0 /* HitTips */ = {
 			isa = PBXGroup;
 			children = (
-				C9AE22C124CBF549003290A0 /* AppDelegate.swift */,
-				C9AE22C324CBF549003290A0 /* SceneDelegate.swift */,
-				C9AE22C524CBF549003290A0 /* ViewController.swift */,
-				C9AE22C724CBF549003290A0 /* Main.storyboard */,
+				C9AE22D224CBF54B003290A0 /* Info.plist */,
 				C9AE22CD24CBF54B003290A0 /* Assets.xcassets */,
 				C9AE22CF24CBF54B003290A0 /* LaunchScreen.storyboard */,
-				C9AE22D224CBF54B003290A0 /* Info.plist */,
-				C9AE22CA24CBF549003290A0 /* HitTips.xcdatamodeld */,
+				C9AE22D924CBF6D5003290A0 /* Models */,
+				C9AE22D824CBF6C0003290A0 /* Resources */,
+				C9AE22DA24CBF6EC003290A0 /* Storyboard */,
+				C9AE22DB24CBF731003290A0 /* View Controllers */,
 			);
 			path = HitTips;
+			sourceTree = "<group>";
+		};
+		C9AE22D824CBF6C0003290A0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C9AE22C124CBF549003290A0 /* AppDelegate.swift */,
+				C9AE22C324CBF549003290A0 /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C9AE22D924CBF6D5003290A0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C9AE22DE24CBF8FE003290A0 /* AlertMessages.swift */,
+				C9AE22E524CBF90D003290A0 /* Comments.swift */,
+				C9AE22E224CBF90D003290A0 /* CoreDataStack.swift */,
+				C9AE22E424CBF90D003290A0 /* Date+Formatter.swift */,
+				C9AE22CA24CBF549003290A0 /* HitTips.xcdatamodeld */,
+				C9AE22E724CBF90D003290A0 /* Tip.swift */,
+				C9AE22F024CBF914003290A0 /* Tip+Codable.swift */,
+				C9AE22E624CBF90D003290A0 /* Tip+Convenience.swift */,
+				C9AE22E324CBF90D003290A0 /* TipController.swift */,
+				C9AE22E024CBF90D003290A0 /* TipRepresentation.swift */,
+				C9AE22E124CBF90D003290A0 /* Tips.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C9AE22DA24CBF6EC003290A0 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C9AE22C724CBF549003290A0 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		C9AE22DB24CBF731003290A0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C9AE22DC24CBF75B003290A0 /* MainViewController.swift */,
+				C9AE22F224CBF988003290A0 /* TipDetailViewController.swift */,
+				C9AE22F324CBF988003290A0 /* HistoryTableViewController.swift */,
+				C9AE22F424CBF988003290A0 /* HistoryTableViewCell.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +212,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9AE22C624CBF549003290A0 /* ViewController.swift in Sources */,
+				C9AE22EC24CBF90D003290A0 /* Date+Formatter.swift in Sources */,
+				C9AE22EE24CBF90D003290A0 /* Tip+Convenience.swift in Sources */,
+				C9AE22F124CBF914003290A0 /* Tip+Codable.swift in Sources */,
+				C9AE22E824CBF90D003290A0 /* TipRepresentation.swift in Sources */,
 				C9AE22CC24CBF549003290A0 /* HitTips.xcdatamodeld in Sources */,
 				C9AE22C224CBF549003290A0 /* AppDelegate.swift in Sources */,
+				C9AE22ED24CBF90D003290A0 /* Comments.swift in Sources */,
 				C9AE22C424CBF549003290A0 /* SceneDelegate.swift in Sources */,
+				C9AE22F624CBF988003290A0 /* HistoryTableViewController.swift in Sources */,
+				C9AE22F724CBF988003290A0 /* HistoryTableViewCell.swift in Sources */,
+				C9AE22E924CBF90D003290A0 /* Tips.swift in Sources */,
+				C9AE22EB24CBF90D003290A0 /* TipController.swift in Sources */,
+				C9AE22DD24CBF75B003290A0 /* MainViewController.swift in Sources */,
+				C9AE22EF24CBF90D003290A0 /* Tip.swift in Sources */,
+				C9AE22DF24CBF8FE003290A0 /* AlertMessages.swift in Sources */,
+				C9AE22EA24CBF90D003290A0 /* CoreDataStack.swift in Sources */,
+				C9AE22F524CBF988003290A0 /* TipDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +381,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mattmartindale.HitTips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -314,7 +398,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mattmartindale.HitTips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
