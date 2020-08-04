@@ -17,7 +17,11 @@ class Comments {
         "I'd tell you what a terrible tipper you are but I'll just let the dissapointment in your date's face tell you.",
         "If that tip were an animal I'd put it down.",
         "I didn't think it was possible to calculate a tip that small.",
-        "Do me a favor.\nPut both your thumbs out. Now bend your arms and say...\"Who has two thumbs and sucks at tipping?!\""
+        "Do me a favor.\nPut both your thumbs out. Now bend your arms and say...\"Who has two thumbs and sucks at tipping?!\"",
+        "Just stop.",
+        "💩",
+        "I squirted juice out of my circuits! Warn me next time you tip like that!",
+        "🚶‍♂️ That's it I'm out of here."
     ]
     
     let midTier: [String] = [
@@ -32,7 +36,9 @@ class Comments {
         "Well... That's one way of tipping. Another way to tip would be \"good.\"",
         "That was aaaaalmost on the verge of not being a pathetic tip.",
         "Okay.. Mhmmm... Let's try something new.. Next time you're deciding on what kind of tip to give, think to yourself, \"Would a loser tip that?\" If they would, don't tip what you just did.",
-        "You see that cute person across the restaurant looking at you? Yeah, me neither."
+        "You see that cute person across the restaurant looking at you? Yeah, me neither.",
+        "I'm a nice calculator, but even I have my limits.",
+        "STOP! I'm trying to think of new comments. If you could stop tipping so terribly for 2 seconds."
     ]
     
     let highTier: [String] = [
@@ -42,7 +48,8 @@ class Comments {
         "Your Tinder date still hates you.",
         "You might want to wait til your birthday check from Grammy clears before you tip that.",
         "Even with that tip, it won't make up for the fact the waiter still hates your guts.",
-        "I'm proud of you for tipping that!..\nHow does it feel? The only approval you can muster is from a digital tipping app."
+        "I'm proud of you for tipping that!..\nHow does it feel? The only approval you can muster is from a digital tipping app.",
+        "** ERROR ** PAYMENT DID NOT PROCESS.\n\nPAY AGAIN\n\n\n\n\nsucker..."
         ]
     
     let fourTwentyTier: [String] = [
@@ -84,6 +91,7 @@ class Comments {
         "Don't you dare tell anyone you found out about this place.",
         "\"Hackerman!\"",
         "You weren't supposed to tip more than 999%. You dirty dog, you.",
+        "Here YOU try and calculate it on this - 🧮",
         #"""
                  _ ________
             ___/   )_______)
@@ -98,8 +106,8 @@ class Comments {
     let negativeHackerTier: [String] = [
         "How do you expect to tip a negative amount? Seriously...",
         "You figured out how to MAKE money from tipping, good job 👍",
-        "This negative tipping amount is a legal binding contract. Present this receipt to a qualified restaurant representative to receive the amount owed to you, specified in the area below.",
-        "Quit trying to break my app! Unless reverse psychology works on you.\nIn that case... feel free to break this app.\n\nI dare you!!"
+        "This negative tipping amount is a legal binding contract. Present this receipt to a qualified restaurant representative to receive the amount owed to you.",
+        "Quit trying to break my app! Unless reverse psychology works on you.\nIn that case... keep breaking this app!\n\nI dare you!!"
     ]
     
 }
