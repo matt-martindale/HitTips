@@ -96,10 +96,10 @@ class Comments {
     ]
     
     let negativeHackerTier: [String] = [
-        "How do you expect to tip a negative amount? Seriously..",
+        "How do you expect to tip a negative amount? Seriously...",
         "You figured out how to MAKE money from tipping, good job 👍",
         "This negative tipping amount is a legal binding contract. Present this receipt to a qualified restaurant representative to receive the amount owed to you, specified in the area below.",
-        "Quit trying to break my app! Unless people giving you commands make you even more adamant in causing chaos.\nIn that case.. feel free to break this app.\n\nI dare you!!"
+        "Quit trying to break my app! Unless reverse psychology works on you.\nIn that case... feel free to break this app.\n\nI dare you!!"
     ]
     
 }
