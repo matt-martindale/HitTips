@@ -1,4 +1,4 @@
-# HitTips <img src="https://github.com/matt-martindale/HitTips/blob/master/Images/HitTipsLogo.png" alt="Hit Tips Logo" width="50px"/>
+# HitTips &nbsp;&nbsp; <img src="https://github.com/matt-martindale/HitTips/blob/master/Images/HitTipsLogo.png" alt="Hit Tips Logo" width="50px"/>
 
 ## The sarcastic, sharp-tongued tip calculator
 
