@@ -1,4 +1,4 @@
-# Tip$#!%
+# HitTips
 
 ## The sarcastic, sharp-tongued tip calculator
 
