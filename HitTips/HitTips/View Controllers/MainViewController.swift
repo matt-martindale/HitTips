@@ -91,7 +91,7 @@ class MainViewController: UIViewController {
             let tipPercentage = Int64(tipPercentageTextField.text!),
             let party = Int64(personAmountTextField.text!),
             let pricePerPerson = Double(pricePerPersonTextField.text!),
-            let totalBill = Double(totalAmountTextField.text!) {
+            let totalBill = Double(totalAmountTextField.text!), billAmountTextField.text != "0.00" {
             
             let tipTier = tipController.setTipTier(tipPercentage: tipPercentage)
             
@@ -159,7 +159,9 @@ class MainViewController: UIViewController {
     }
     
     func invalidBillAmount(alert: UIAlertAction!) {
-        billAmountTextField.becomeFirstResponder()
+//        billAmountTextField.becomeFirstResponder()
+        billAmountTextField.text = "0.00"
+        updateCalculations()
     }
     
     func updateAmountAfterRoundingTotal() {

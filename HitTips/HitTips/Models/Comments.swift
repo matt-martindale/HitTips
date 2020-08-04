@@ -11,11 +11,13 @@ import Foundation
 class Comments {
     let lowTier: [String] = [
         "That tip's shit Mate.",
-        "I'm sorry, it's been a bad day. I didn't mean to say all these things.",
+        "I'm sorry, it's been a bad day. I didn't mean to say all those things.",
         "quisquiliae tip",
         "You know how average looking people take pictures with their ugly friend to make themselves look better? Yeah, yours just helped another one look like Alicia Vikander.",
         "I'd tell you what a terrible tipper you are but I'll just let the dissapointment in your date's face tell you.",
-        "That tip was so weak, if it were an animal I'd put it down."
+        "If that tip were an animal I'd put it down.",
+        "I didn't think it was possible to calculate a tip that small.",
+        "Do me a favor.\nPut both your thumbs out. Now bend your arms and say...\"Who has two thumbs and sucks at tipping?!\""
     ]
     
     let midTier: [String] = [
@@ -30,7 +32,7 @@ class Comments {
         "Well... That's one way of tipping. Another way to tip would be \"good.\"",
         "That was aaaaalmost on the verge of not being a pathetic tip.",
         "Okay.. Mhmmm... Let's try something new.. Next time you're deciding on what kind of tip to give, think to yourself, \"Would a loser tip that?\" If they would, don't tip what you just did.",
-        "You see that cute person across the restaurant looking at you? Yeah, me neither.."
+        "You see that cute person across the restaurant looking at you? Yeah, me neither."
     ]
     
     let highTier: [String] = [
@@ -38,7 +40,7 @@ class Comments {
         "Are you trying to impress your date because she wasn't drooling over that story of that one time you visited Napa Valley? Or interested in listening to you talk about your leatherworks?",
         "Talk is cheap, put your money where your mouth is.",
         "Your Tinder date still hates you.",
-        "You might want to wait til your birthday check from Gammy clears before you tip that.",
+        "You might want to wait til your birthday check from Grammy clears before you tip that.",
         "Even with that tip, it won't make up for the fact the waiter still hates your guts.",
         "I'm proud of you for tipping that!..\nHow does it feel? The only approval you can muster is from a digital tipping app."
         ]

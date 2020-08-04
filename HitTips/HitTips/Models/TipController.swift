@@ -68,28 +68,28 @@ class TipController {
         
         switch tipTier {
         case .fourTwenty:
-            let randomIndex = Int.random(in: 0..<comments.fourTwentyTier.count - 1)
+            let randomIndex = Int.random(in: 0..<comments.fourTwentyTier.count)
             return comments.fourTwentyTier[randomIndex]
         case .sixtyNine:
-            let randomIndex = Int.random(in: 0..<comments.sixtyNineTier.count - 1)
+            let randomIndex = Int.random(in: 0..<comments.sixtyNineTier.count)
             return comments.sixtyNineTier[randomIndex]
         case .sixsixsix:
-            let randomIndex = Int.random(in: 0..<comments.sixsixsixTier.count - 1)
+            let randomIndex = Int.random(in: 0..<comments.sixsixsixTier.count)
             return comments.sixsixsixTier[randomIndex]
         case .lowTier:
-            let randomIndex = Int.random(in: 0..<comments.lowTier.count - 1)
+            let randomIndex = Int.random(in: 0..<comments.lowTier.count)
             return comments.lowTier[randomIndex]
         case .midTier:
-            let randomIndex = Int.random(in: 0..<comments.midTier.count - 1)
+            let randomIndex = Int.random(in: 0..<comments.midTier.count)
             return comments.midTier[randomIndex]
         case .highTier:
-            let randomIndex = Int.random(in: 0..<comments.highTier.count - 1)
+            let randomIndex = Int.random(in: 0..<comments.highTier.count)
             return comments.highTier[randomIndex]
         case .negativeHacker:
-            let randomIndex = Int.random(in: 0..<comments.negativeHackerTier.count - 1)
+            let randomIndex = Int.random(in: 0..<comments.negativeHackerTier.count)
             return comments.negativeHackerTier[randomIndex]
         default:
-            let randomIndex = Int.random(in: 0..<comments.hackerTier.count - 1)
+            let randomIndex = Int.random(in: 0..<comments.hackerTier.count)
             return comments.hackerTier[randomIndex]
         }
     }
