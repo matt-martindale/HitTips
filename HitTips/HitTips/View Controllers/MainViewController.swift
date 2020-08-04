@@ -35,6 +35,7 @@ class MainViewController: UIViewController {
         personAmountPickerView.selectRow(tipController.personAmount.count - 1, inComponent: 0, animated: true)
         tipPercentagePickerView.selectRow(tipController.tipPercentage.count - 11, inComponent: 0, animated: true)
         createToolbar()
+        addTapGesture()
     }
     
     override func viewWillLayoutSubviews() {
@@ -73,19 +74,6 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func confirmTipButtonTapped(_ sender: UIButton) {
-//        guard billAmountTextField.text!.isEmpty,
-//            tipAmountTextField.text!.isEmpty,
-//            tipPercentageTextField.text!.isEmpty,
-//            personAmountTextField.text!.isEmpty,
-//            pricePerPersonTextField.text!.isEmpty,
-//            totalAmountTextField.text!.isEmpty
-//            else {
-//                if let tipPercentage = Int(tipPercentageTextField.text!),
-//                    let totalBill = Double(totalAmountTextField.text!) {
-//                    tipController.createTip(tipPercentage: tipPercentage, totalBill: totalBill)
-//                }
-//                return
-//        }
         if let billAmount = Double(billAmountTextField.text!),
             let tipAmount = Double(tipAmountTextField.text!),
             let tipPercentage = Int64(tipPercentageTextField.text!),
@@ -159,7 +147,6 @@ class MainViewController: UIViewController {
     }
     
     func invalidBillAmount(alert: UIAlertAction!) {
-//        billAmountTextField.becomeFirstResponder()
         billAmountTextField.text = "0.00"
         updateCalculations()
     }
@@ -212,21 +199,17 @@ class MainViewController: UIViewController {
         updateCalculations()
     }
     
+    private func addTapGesture() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let tipPercentage = Int(tipPercentageTextField.text!),
-//            let billAmount = Double(billAmountTextField.text!),
-//            let tipAmount = Double(tipAmountTextField.text!),
-//            let party = Int(personAmountTextField.text!),
-//            let pricePerPerson = Double(pricePerPersonTextField.text!),
-//            let totalBill = Double(totalAmountTextField.text!) {
         guard let tip = tip else { print("No tip in prepareForSegue"); return }
-//        let tipTier = tipController.setTipTier(tipPercentage: tip.tipPercentage)
-//            let newTip = Tip(billAmount: billAmount, tipAmount: tipAmount, tipPercentage: tipPercentage, party: party, pricePerPerson: pricePerPerson, totalBill: totalBill)
-            if segue.identifier == "DetailSegue" {
-                let detailVC = segue.destination as? TipDetailViewController
-                detailVC?.tipController = tipController
-                detailVC?.tip = tip
-//            }
+        if segue.identifier == "DetailSegue" {
+            let detailVC = segue.destination as? TipDetailViewController
+            detailVC?.tipController = tipController
+            detailVC?.tip = tip
         }
     }
     
