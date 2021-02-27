@@ -32,6 +32,7 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        billAmountTextField.becomeFirstResponder()
         personAmountPickerView.selectRow(tipController.personAmount.count - 1, inComponent: 0, animated: true)
         tipPercentagePickerView.selectRow(tipController.tipPercentage.count - 11, inComponent: 0, animated: true)
         createToolbar()
@@ -46,20 +47,28 @@ class MainViewController: UIViewController {
     func setupSubViews() {
         billAmountView.layer.cornerRadius = 10
         billAmountView.layer.masksToBounds = true
-        billAmountTextField.layer.cornerRadius = 22
+        billAmountTextField.layer.cornerRadius = 5
+        billAmountTextField.layer.borderWidth = 1
         billAmountTextField.layer.masksToBounds = true
         
         tipAmountView.layer.cornerRadius = 10
         tipAmountView.layer.masksToBounds = true
-        tipAmountTextField.layer.cornerRadius = 22
+        tipAmountTextField.layer.cornerRadius = 5
+        tipAmountTextField.layer.borderWidth = 1
         tipAmountTextField.layer.masksToBounds = true
         
         totalAmountView.layer.cornerRadius = 20
         totalAmountView.layer.masksToBounds = true
-        pricePerPersonTextField.layer.cornerRadius = 28
+        pricePerPersonTextField.layer.cornerRadius = 5
+        pricePerPersonTextField.layer.borderWidth = 1
         pricePerPersonTextField.layer.masksToBounds = true
-        totalAmountTextField.layer.cornerRadius = 28
+        totalAmountTextField.layer.cornerRadius = 5
+        totalAmountTextField.layer.borderWidth = 1
         totalAmountTextField.layer.masksToBounds = true
+        
+        tipPercentageTextField.layer.borderWidth = 1
+        personAmountTextField.layer.borderWidth = 1
+        
         
         calculateTipButton.layer.cornerRadius = 20
         calculateTipButton.layer.masksToBounds = true
@@ -148,6 +157,7 @@ class MainViewController: UIViewController {
     
     func invalidBillAmount(alert: UIAlertAction!) {
         billAmountTextField.text = "0.00"
+        personAmountTextField.text = "1"
         updateCalculations()
     }
     

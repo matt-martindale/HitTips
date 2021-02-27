@@ -35,17 +35,10 @@ class TipController {
         return tipPercentage.reversed()
     }
     
-//    func createTip(tipPercentage: Int, totalBill: Double) {
-//        let newTip = Tip(tipPercentage: tipPercentage, totalBill: totalBill, date: Date())
-//        Tips.shared.tips.append(newTip)
-//        self.tip = newTip
-//    }
-    
     func setTipTier(tipPercentage: Int64) -> String {
         switch tipPercentage {
         case 420:
             return getRandomComment(tipTier: .fourTwenty)
-//            return TipTier.fourTwenty
         case 69:
             return getRandomComment(tipTier: .sixtyNine)
         case 666:
