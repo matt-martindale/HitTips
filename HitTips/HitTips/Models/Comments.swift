@@ -22,7 +22,8 @@ class Comments {
         "💩",
         "I shorted out my circuits! Warn me next time you tip like that!",
         "🚶‍♂️ That's it I'm out of here.",
-        "Hahahaha, no really!.. What are you going to tip?"
+        "Hahahaha, no really!.. What are you going to tip?",
+        "Did you even try?"
     ]
     
     let midTier: [String] = [
@@ -51,7 +52,8 @@ class Comments {
         "You might want to wait til your birthday check from Grammy clears before you tip that.",
         "Even with that tip, it won't make up for the fact the waiter still hates your guts.",
         "I'm proud of you for tipping that!..\nHow does it feel? The only approval you can muster is from a digital tipping app.",
-        "** ERROR ** PAYMENT DID NOT PROCESS.\n\nPAY AGAIN\n\n\n\n\nsucker..."
+        "** ERROR ** PAYMENT DID NOT PROCESS.\n\nPAY AGAIN\n\n\n\n\nsucker...",
+        "I LOVE YOU"
         ]
     
     let fourTwentyTier: [String] = [
