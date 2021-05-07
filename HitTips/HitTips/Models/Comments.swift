@@ -30,7 +30,7 @@ class Comments {
         "That was the uglier, fatter version of a better tip.",
         "Oh nice! Now you can add to your dating profile: \"Also a terrible Tipper.\"",
         "I bet your date's as hot as that tip. Not very.",
-        "Have an idea for an insult?\n\nSend your requests to: www.ThingsPeopleCalledMeWhenIWasSixteen.com",
+        "Have an idea for an insult?\n\nSend your ideas to: www.ThingsPeopleCalledMeWhenIWasSixteen.com",
         "Really? That's what you're gonna tip?",
         "Nope.. nope.. nope. Go back. Try again.",
         "Well... That's one way of tipping. Another way to tip would be \"good.\"",
