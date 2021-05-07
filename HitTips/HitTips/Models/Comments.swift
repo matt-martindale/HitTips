@@ -38,13 +38,13 @@ class Comments {
         "Okay.. Mhmmm... Let's try something new.. Next time you're deciding on what kind of tip to give, think to yourself, \"Would a loser tip that?\" If they would, don't tip what you just did.",
         "You see that cute person across the restaurant looking at you? Yeah, me neither.",
         "I'm a nice calculator, but even I have my limits.",
-        "STOP! I'm trying to think of new comments. If you could stop tipping so terribly for 2 seconds.",
+        "STOP! I'm trying to think of new comments. If you could stop tipping so terribly for 2 seconds...",
         "Mediocre!!"
     ]
     
     let highTier: [String] = [
         "Jeff Bezos over here. We all know you're too cheap to tip that.",
-        "Are you trying to impress your date because she wasn't drooling over that story of that one time you visited Napa Valley? Or interested in listening to you talk about your leatherworks?",
+        "Trying to impress your date 'cause she wasn't drooling over that story of the one time you visited Napa Valley? Or listening to you talk about your leatherworks?",
         "Talk is cheap, put your money where your mouth is.",
         "Your Tinder date still hates you.",
         "You might want to wait til your birthday check from Grammy clears before you tip that.",
