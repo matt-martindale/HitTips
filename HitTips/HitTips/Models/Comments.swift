@@ -21,7 +21,8 @@ class Comments {
         "Just stop.",
         "💩",
         "I shorted out my circuits! Warn me next time you tip like that!",
-        "🚶‍♂️ That's it I'm out of here."
+        "🚶‍♂️ That's it I'm out of here.",
+        "Hahahaha, no really!.. What are you going to tip?"
     ]
     
     let midTier: [String] = [
