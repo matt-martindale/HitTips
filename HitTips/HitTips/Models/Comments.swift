@@ -13,14 +13,14 @@ class Comments {
         "That tip's shit Mate.",
         "I'm sorry, it's been a bad day. I didn't mean to say all those things.",
         "quisquiliae tip",
-        "You know how average looking people take pictures with their ugly friend to make themselves look better? Yeah, yours just helped another one look like Alicia Vikander.",
+        "Oh boy... That tip was like the ugly friend you use to make yourself look better.",
         "I'd tell you what a terrible tipper you are but I'll just let the dissapointment in your date's face tell you.",
         "If that tip were an animal I'd put it down.",
         "I didn't think it was possible to calculate a tip that small.",
-        "Do me a favor.\nPut both your thumbs out. Now bend your arms and say...\"Who has two thumbs and sucks at tipping?!\"",
+        "Put both your thumbs out... Now, bend your arms and say...\"Who has two thumbs and sucks at tipping?!\"",
         "Just stop.",
         "💩",
-        "I squirted juice out of my circuits! Warn me next time you tip like that!",
+        "I shorted out my circuits! Warn me next time you tip like that!",
         "🚶‍♂️ That's it I'm out of here."
     ]
     
@@ -38,7 +38,8 @@ class Comments {
         "Okay.. Mhmmm... Let's try something new.. Next time you're deciding on what kind of tip to give, think to yourself, \"Would a loser tip that?\" If they would, don't tip what you just did.",
         "You see that cute person across the restaurant looking at you? Yeah, me neither.",
         "I'm a nice calculator, but even I have my limits.",
-        "STOP! I'm trying to think of new comments. If you could stop tipping so terribly for 2 seconds."
+        "STOP! I'm trying to think of new comments. If you could stop tipping so terribly for 2 seconds.",
+        "Mediocre!!"
     ]
     
     let highTier: [String] = [
@@ -81,7 +82,7 @@ class Comments {
     ]
     
     let hackerTier: [String] = [
-        "Did.. did you just break my app...?",
+        "Did.. did you just break this app...?",
         "Hey, how'd you get here? Get out of here. Nothing to see.",
         "It's dangerous to go alone! Take this.\n\n\t\t\t\t\t\t⚔️",
         "⬆⬆⬇⬇⬅➡⬅➡ＢＡStart",
