@@ -20,4 +20,3 @@ This iOS app allows you to do all normal things a tipping calculator does:
 </p>
 
 ## How it works
-
