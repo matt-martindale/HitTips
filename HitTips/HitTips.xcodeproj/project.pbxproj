@@ -12,6 +12,7 @@
 		C8C844732E5C16D300D17A2A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C844722E5C16D300D17A2A /* NetworkManager.swift */; };
 		C8C844752E5C16ED00D17A2A /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C844742E5C16ED00D17A2A /* RequestBuilder.swift */; };
 		C8C844772E5C170D00D17A2A /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C844762E5C170D00D17A2A /* APIKey.swift */; };
+		C8C844792E5C1DFB00D17A2A /* FetchTipCommentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C844782E5C1DFB00D17A2A /* FetchTipCommentManager.swift */; };
 		C9AE22C224CBF549003290A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22C124CBF549003290A0 /* AppDelegate.swift */; };
 		C9AE22C424CBF549003290A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22C324CBF549003290A0 /* SceneDelegate.swift */; };
 		C9AE22C924CBF549003290A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AE22C724CBF549003290A0 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 		C8C844722E5C16D300D17A2A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C8C844742E5C16ED00D17A2A /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		C8C844762E5C170D00D17A2A /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		C8C844782E5C1DFB00D17A2A /* FetchTipCommentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTipCommentManager.swift; sourceTree = "<group>"; };
 		C9AE22BE24CBF549003290A0 /* HitTips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitTips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AE22C124CBF549003290A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9AE22C324CBF549003290A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				C8C844702E5C16B500D17A2A /* AIService.swift */,
 				C8C844722E5C16D300D17A2A /* NetworkManager.swift */,
 				C8C844742E5C16ED00D17A2A /* RequestBuilder.swift */,
+				C8C844782E5C1DFB00D17A2A /* FetchTipCommentManager.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				C9AE22EC24CBF90D003290A0 /* Date+Formatter.swift in Sources */,
 				C9AE22EE24CBF90D003290A0 /* Tip+Convenience.swift in Sources */,
 				C9AE22F124CBF914003290A0 /* Tip+Codable.swift in Sources */,
+				C8C844792E5C1DFB00D17A2A /* FetchTipCommentManager.swift in Sources */,
 				C9AE22E824CBF90D003290A0 /* TipRepresentation.swift in Sources */,
 				C8C844772E5C170D00D17A2A /* APIKey.swift in Sources */,
 				C8C8446F2E5C169500D17A2A /* AIResponse.swift in Sources */,

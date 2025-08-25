@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
     // MARK: -Properties
     var tipController = TipController()
     let alertMessages = AlertMessages()
+    let tipCommentManager = FetchTipCommentManager()
     var tip: Tip?
     
     // MARK: -IBOutlets
@@ -47,22 +48,22 @@ class MainViewController: UIViewController {
     func setupSubViews() {
         billAmountView.layer.cornerRadius = 10
         billAmountView.layer.masksToBounds = true
-        billAmountTextField.layer.cornerRadius = 5
+        billAmountTextField.layer.cornerRadius = 10
         billAmountTextField.layer.borderWidth = 1
         billAmountTextField.layer.masksToBounds = true
         
         tipAmountView.layer.cornerRadius = 10
         tipAmountView.layer.masksToBounds = true
-        tipAmountTextField.layer.cornerRadius = 5
+        tipAmountTextField.layer.cornerRadius = 10
         tipAmountTextField.layer.borderWidth = 1
         tipAmountTextField.layer.masksToBounds = true
         
-        totalAmountView.layer.cornerRadius = 20
+        totalAmountView.layer.cornerRadius = 10
         totalAmountView.layer.masksToBounds = true
-        pricePerPersonTextField.layer.cornerRadius = 5
+        pricePerPersonTextField.layer.cornerRadius = 10
         pricePerPersonTextField.layer.borderWidth = 1
         pricePerPersonTextField.layer.masksToBounds = true
-        totalAmountTextField.layer.cornerRadius = 5
+        totalAmountTextField.layer.cornerRadius = 10
         totalAmountTextField.layer.borderWidth = 1
         totalAmountTextField.layer.masksToBounds = true
         
@@ -70,7 +71,7 @@ class MainViewController: UIViewController {
         personAmountTextField.layer.borderWidth = 1
         
         
-        calculateTipButton.layer.cornerRadius = 20
+        calculateTipButton.layer.cornerRadius = 10
         calculateTipButton.layer.masksToBounds = true
     }
     
@@ -90,9 +91,9 @@ class MainViewController: UIViewController {
             let pricePerPerson = Double(pricePerPersonTextField.text ?? ""),
             let totalBill = Double(totalAmountTextField.text ?? ""), billAmountTextField.text != "0.00" {
             
-            let tipTier = tipController.setTipTier(tipPercentage: tipPercentage)
+            let tipComment = tipCommentManager.fetchTipComment(tipPercentage)
             
-            let newTip = Tip(billAmount: billAmount, party: party, pricePerPerson: pricePerPerson, tipAmount: tipAmount, tipPercentage: tipPercentage, totalBill: totalBill, tipTier: tipTier)
+            let newTip = Tip(billAmount: billAmount, party: party, pricePerPerson: pricePerPerson, tipAmount: tipAmount, tipPercentage: tipPercentage, totalBill: totalBill, tipTier: tipComment)
             self.tip = newTip
             
             let context = CoreDataStack.shared.mainContext

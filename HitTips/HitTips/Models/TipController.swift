@@ -35,7 +35,7 @@ class TipController {
         return tipPercentage.reversed()
     }
     
-    func setTipTier(tipPercentage: Int64) -> String {
+    func fetchTipCommentFromLocal(tipPercentage: Int64) -> String {
         switch tipPercentage {
         case 420:
             return getRandomComment(tipTier: .fourTwenty)
