@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C8C8446F2E5C169500D17A2A /* AIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C8446E2E5C169500D17A2A /* AIResponse.swift */; };
+		C8C844712E5C16B500D17A2A /* AIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C844702E5C16B500D17A2A /* AIService.swift */; };
+		C8C844732E5C16D300D17A2A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C844722E5C16D300D17A2A /* NetworkManager.swift */; };
+		C8C844752E5C16ED00D17A2A /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C844742E5C16ED00D17A2A /* RequestBuilder.swift */; };
+		C8C844772E5C170D00D17A2A /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C844762E5C170D00D17A2A /* APIKey.swift */; };
 		C9AE22C224CBF549003290A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22C124CBF549003290A0 /* AppDelegate.swift */; };
 		C9AE22C424CBF549003290A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22C324CBF549003290A0 /* SceneDelegate.swift */; };
 		C9AE22C924CBF549003290A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AE22C724CBF549003290A0 /* Main.storyboard */; };
@@ -30,6 +35,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C8C8446E2E5C169500D17A2A /* AIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIResponse.swift; sourceTree = "<group>"; };
+		C8C844702E5C16B500D17A2A /* AIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIService.swift; sourceTree = "<group>"; };
+		C8C844722E5C16D300D17A2A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C8C844742E5C16ED00D17A2A /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		C8C844762E5C170D00D17A2A /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		C9AE22BE24CBF549003290A0 /* HitTips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitTips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AE22C124CBF549003290A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9AE22C324CBF549003290A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +75,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C8C8446D2E5C167B00D17A2A /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				C8C8446E2E5C169500D17A2A /* AIResponse.swift */,
+				C8C844702E5C16B500D17A2A /* AIService.swift */,
+				C8C844722E5C16D300D17A2A /* NetworkManager.swift */,
+				C8C844742E5C16ED00D17A2A /* RequestBuilder.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
 		C9AE22B524CBF549003290A0 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +105,7 @@
 		C9AE22C024CBF549003290A0 /* HitTips */ = {
 			isa = PBXGroup;
 			children = (
+				C8C8446D2E5C167B00D17A2A /* View Models */,
 				C9AE22D224CBF54B003290A0 /* Info.plist */,
 				C9AE22CD24CBF54B003290A0 /* Assets.xcassets */,
 				C9AE22CF24CBF54B003290A0 /* LaunchScreen.storyboard */,
@@ -118,6 +140,7 @@
 				C9AE22E624CBF90D003290A0 /* Tip+Convenience.swift */,
 				C9AE22E024CBF90D003290A0 /* TipRepresentation.swift */,
 				C9AE22E124CBF90D003290A0 /* Tips.swift */,
+				C8C844762E5C170D00D17A2A /* APIKey.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -212,16 +235,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8C844752E5C16ED00D17A2A /* RequestBuilder.swift in Sources */,
+				C8C844712E5C16B500D17A2A /* AIService.swift in Sources */,
 				C9AE22EC24CBF90D003290A0 /* Date+Formatter.swift in Sources */,
 				C9AE22EE24CBF90D003290A0 /* Tip+Convenience.swift in Sources */,
 				C9AE22F124CBF914003290A0 /* Tip+Codable.swift in Sources */,
 				C9AE22E824CBF90D003290A0 /* TipRepresentation.swift in Sources */,
+				C8C844772E5C170D00D17A2A /* APIKey.swift in Sources */,
+				C8C8446F2E5C169500D17A2A /* AIResponse.swift in Sources */,
 				C9AE22CC24CBF549003290A0 /* HitTips.xcdatamodeld in Sources */,
 				C9AE22C224CBF549003290A0 /* AppDelegate.swift in Sources */,
 				C9AE22ED24CBF90D003290A0 /* Comments.swift in Sources */,
 				C9AE22C424CBF549003290A0 /* SceneDelegate.swift in Sources */,
 				C9AE22F624CBF988003290A0 /* HistoryTableViewController.swift in Sources */,
 				C9AE22F724CBF988003290A0 /* HistoryTableViewCell.swift in Sources */,
+				C8C844732E5C16D300D17A2A /* NetworkManager.swift in Sources */,
 				C9AE22E924CBF90D003290A0 /* Tips.swift in Sources */,
 				C9AE22EB24CBF90D003290A0 /* TipController.swift in Sources */,
 				C9AE22DD24CBF75B003290A0 /* MainViewController.swift in Sources */,
