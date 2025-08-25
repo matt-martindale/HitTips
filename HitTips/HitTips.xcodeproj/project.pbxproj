@@ -84,7 +84,6 @@
 		C9AE22C024CBF549003290A0 /* HitTips */ = {
 			isa = PBXGroup;
 			children = (
-				C9B2C42D25EB02B7008375C0 /* Model Controllers */,
 				C9AE22D224CBF54B003290A0 /* Info.plist */,
 				C9AE22CD24CBF54B003290A0 /* Assets.xcassets */,
 				C9AE22CF24CBF54B003290A0 /* LaunchScreen.storyboard */,
@@ -140,13 +139,6 @@
 				C9AE22F424CBF988003290A0 /* HistoryTableViewCell.swift */,
 			);
 			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		C9B2C42D25EB02B7008375C0 /* Model Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,7 +379,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mattmartindale.HitTips;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattmartindale.HitTip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -405,7 +397,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mattmartindale.HitTips;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mattmartindale.HitTip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

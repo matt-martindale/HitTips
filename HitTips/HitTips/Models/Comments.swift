@@ -10,11 +10,10 @@ import Foundation
 
 class Comments {
     let lowTier: [String] = [
-        "That tip's shit Mate.",
         "I'm sorry, it's been a bad day. I didn't mean to say all those things.",
         "quisquiliae tip",
         "Oh boy... That tip was like the ugly friend you use to make yourself look better.",
-        "I'd tell you what a terrible tipper you are but I'll just let the dissapointment in your date's face tell you.",
+        "I'd tell you what a terrible tipper you are but I'll just let the disappointment in your date's face tell you.",
         "If that tip were an animal I'd put it down.",
         "I didn't think it was possible to calculate a tip that small.",
         "Put both your thumbs out... Now, bend your arms and say...\"Who has two thumbs and sucks at tipping?!\"",
@@ -37,7 +36,7 @@ class Comments {
         "Nope.. nope.. nope. Go back. Try again.",
         "Well... That's one way of tipping. Another way to tip would be \"good.\"",
         "That was aaaaalmost on the verge of not being a pathetic tip.",
-        "Okay.. Mhmmm... Let's try something new.. Next time you're deciding on what kind of tip to give, think to yourself, \"Would a loser tip that?\" If they would, don't tip what you just did.",
+        "Okay.. Mhmmm... Let's try something new.. Next time you're deciding on what kind of tip to give, think to yourself, \"Would a loser tip that?\" If they would, don't tip that.",
         "You see that cute person across the restaurant looking at you? Yeah, me neither.",
         "I'm a nice calculator, but even I have my limits.",
         "STOP! I'm trying to think of new comments. If you could stop tipping so terribly for 2 seconds...",
@@ -46,10 +45,9 @@ class Comments {
     
     let highTier: [String] = [
         "Jeff Bezos over here. We all know you're too cheap to tip that.",
-        "Trying to impress your date 'cause she wasn't drooling over that story of the one time you visited Napa Valley? Or listening to you talk about your leatherworks?",
         "Talk is cheap, put your money where your mouth is.",
         "Your Tinder date still hates you.",
-        "You might want to wait til your birthday check from Grammy clears before you tip that.",
+        "You might want to wait til your birthday check from Gammy clears before you tip that.",
         "Even with that tip, it won't make up for the fact the waiter still hates your guts.",
         "I'm proud of you for tipping that!..\nHow does it feel? The only approval you can muster is from a digital tipping app.",
         "** ERROR ** PAYMENT DID NOT PROCESS.\n\nPAY AGAIN\n\n\n\n\nsucker...",
