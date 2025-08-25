@@ -83,12 +83,12 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func confirmTipButtonTapped(_ sender: UIButton) {
-        if let billAmount = Double(billAmountTextField.text!),
-            let tipAmount = Double(tipAmountTextField.text!),
-            let tipPercentage = Int64(tipPercentageTextField.text!),
-            let party = Int64(personAmountTextField.text!),
-            let pricePerPerson = Double(pricePerPersonTextField.text!),
-            let totalBill = Double(totalAmountTextField.text!), billAmountTextField.text != "0.00" {
+        if let billAmount = Double(billAmountTextField.text ?? ""),
+            let tipAmount = Double(tipAmountTextField.text ?? ""),
+            let tipPercentage = Int64(tipPercentageTextField.text ?? ""),
+            let party = Int64(personAmountTextField.text ?? ""),
+            let pricePerPerson = Double(pricePerPersonTextField.text ?? ""),
+            let totalBill = Double(totalAmountTextField.text ?? ""), billAmountTextField.text != "0.00" {
             
             let tipTier = tipController.setTipTier(tipPercentage: tipPercentage)
             
@@ -106,7 +106,7 @@ class MainViewController: UIViewController {
             
         } else {
             
-            let alertController = UIAlertController(title: "Fill in all fields", message: "\(alertMessages.messages.randomElement()!)", preferredStyle: .actionSheet)
+            let alertController = UIAlertController(title: "Fill in all fields", message: "\(alertMessages.messages.randomElement() ?? "Smarty-pants")", preferredStyle: .actionSheet)
             let okAction = UIAlertAction(title: "Okay", style: .cancel, handler: alertHandler)
             okAction.setValue(UIColor.black, forKey: "titleTextColor")
             alertController.addAction(okAction)
@@ -114,12 +114,12 @@ class MainViewController: UIViewController {
         }
     }
     
-    func alertHandler(alert: UIAlertAction!) {
+    func alertHandler(alert: UIAlertAction) {
         billAmountTextField.becomeFirstResponder()
     }
     
     @IBAction func roundUpButtonTapped(_ sender: UIButton) {
-        if let totalBill = Double(totalAmountTextField.text!) {
+        if let totalBill = Double(totalAmountTextField.text ?? "") {
             let roundedUpTotal = tipController.roundUp(oldTotalBill: totalBill)
             totalAmountTextField.text = String(format: "%.2f", roundedUpTotal)
         }
@@ -127,7 +127,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func roundDownButtonTapped(_ sender: UIButton) {
-        if let totalBill = Double(totalAmountTextField.text!) {
+        if let totalBill = Double(totalAmountTextField.text ?? "") {
             let roundedDownTotal = tipController.roundDown(oldTotalBill: totalBill)
             totalAmountTextField.text = String(format: "%.2f", roundedDownTotal)
         }
@@ -136,9 +136,9 @@ class MainViewController: UIViewController {
     
     // MARK: -Functions
     func updateCalculations() {
-        if let billAmount = Double(billAmountTextField.text!),
+        if let billAmount = Double(billAmountTextField.text ?? ""),
             let tipPercentage = tipPercentageTextField.text,
-            let party = Double(personAmountTextField.text!){
+            let party = Double(personAmountTextField.text ?? ""){
             let roundedBillAmount = Double(round(100*billAmount)/100)
             let tipAmount = tipController.calculateTipAmount(billAmount: Double(roundedBillAmount), tipPercentage: Int(tipPercentage))
             billAmountTextField.text = String(format: "%.2f", roundedBillAmount)
@@ -165,9 +165,9 @@ class MainViewController: UIViewController {
         if billAmountTextField.text == "0.00" {
             return
         }
-        if let billAmount = Double(billAmountTextField.text!),
-            let personAmount = Double(personAmountTextField.text!),
-            let totalBill = Double(totalAmountTextField.text!) {
+        if let billAmount = Double(billAmountTextField.text ?? ""),
+            let personAmount = Double(personAmountTextField.text ?? ""),
+            let totalBill = Double(totalAmountTextField.text ?? "") {
             let newTipAmount = totalBill - billAmount
             tipAmountTextField.text = String(format: "%.2f", newTipAmount)
             let newPricePerPerson = totalBill / personAmount
@@ -197,7 +197,7 @@ class MainViewController: UIViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
         //checks if party number is 0, if true, changes it to 1
-        if Double(personAmountTextField.text!) == 0.0 {
+        if Double(personAmountTextField.text ?? "") == 0.0 {
             let alertController = UIAlertController(title: "Number in party can't be 0", message: "Unless you plan to dine-and-dash", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Fine, I'll pay...", style: .cancel) { _ in
                 self.personAmountTextField.text = "1"
@@ -250,7 +250,7 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         if pickerView.tag == 1 {
             let value = tipController.personAmount[row]
             personAmountTextField.text = String(value)
-            if let totalAmount = Double(totalAmountTextField.text!) {
+            if let totalAmount = Double(totalAmountTextField.text ?? "") {
                 if totalAmount.truncatingRemainder(dividingBy: 1.0) == 0 {
                     updateAmountAfterRoundingTotal()
                 } else {
