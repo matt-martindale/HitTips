@@ -97,6 +97,12 @@ class MainViewController: UIViewController {
                 let newTip = Tip(billAmount: billAmount, party: party, pricePerPerson: pricePerPerson, tipAmount: tipAmount, tipPercentage: tipPercentage, totalBill: totalBill, tipTier: tipComment)
                 self.tip = newTip
                 
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let detailVC = storyboard.instantiateViewController(withIdentifier: "TipDetailViewController") as! TipDetailViewController
+                detailVC.tipController = tipController
+                detailVC.tip = self.tip
+                self.present(detailVC, animated: true)
+                
                 let context = CoreDataStack.shared.mainContext
                 
                 do {
