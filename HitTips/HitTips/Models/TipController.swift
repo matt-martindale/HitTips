@@ -23,10 +23,10 @@ class TipController {
     
     var tipPercentage: [Int] {
         var tipPercentage: [Int] = []
-        for percent in 5...15 {
+        for percent in 5...20 {
             tipPercentage.append(percent)
         }
-        for percent in 20...30 where percent % 5 == 0 {
+        for percent in 25...30 where percent % 5 == 0 {
             tipPercentage.append(percent)
         }
         for percent in 40...100 where percent % 10 == 0 {
@@ -43,11 +43,11 @@ class TipController {
             return getRandomComment(tipTier: .sixtyNine)
         case 666:
             return getRandomComment(tipTier: .sixsixsix)
-        case 0...15:
+        case 0...14:
             return getRandomComment(tipTier: .lowTier)
-        case 16...30:
+        case 15...29:
             return getRandomComment(tipTier: .midTier)
-        case 31...999:
+        case 30...999:
             return getRandomComment(tipTier: .highTier)
         case ...(-1):
             return getRandomComment(tipTier: .negativeHacker)
