@@ -16,6 +16,7 @@ class MainViewController: UIViewController, BannerViewDelegate {
     let alertMessages = AlertMessages()
     let tipCommentManager = FetchTipCommentManager()
     var tip: Tip?
+    let spinnerView = SpinnerViewController()
     
     // MARK: -IBOutlets
     @IBOutlet weak var billAmountView: UIView!
@@ -39,7 +40,7 @@ class MainViewController: UIViewController, BannerViewDelegate {
         tipPercentagePickerView.selectRow(tipController.tipPercentage.count - 11, inComponent: 0, animated: true)
         createToolbar()
         addTapGesture()
-        setupGoogleBannerView()
+        setupHomePageGoogleBannerView()
     }
     
     override func viewWillLayoutSubviews() {
@@ -77,9 +78,9 @@ class MainViewController: UIViewController, BannerViewDelegate {
         calculateTipButton.layer.masksToBounds = true
     }
     
-    func setupGoogleBannerView() {
+    func setupHomePageGoogleBannerView() {
         let bannerView = BannerView(adSize: AdSizeBanner)
-        bannerView.adUnitID = Keys.homePageAdUnit
+        bannerView.adUnitID = Keys.testAdUnit
         bannerView.rootViewController = self
         bannerView.delegate = self
         bannerView.translatesAutoresizingMaskIntoConstraints = false
@@ -108,7 +109,9 @@ class MainViewController: UIViewController, BannerViewDelegate {
                let pricePerPerson = Double(pricePerPersonTextField.text ?? ""),
                let totalBill = Double(totalAmountTextField.text ?? ""), billAmountTextField.text != "0.00" {
                 
+                loadSpinnerView()
                 let tipComment = await tipCommentManager.fetchTipComment(tipPercentage)
+                stopSpinnerView()
                 
                 let newTip = Tip(billAmount: billAmount, party: party, pricePerPerson: pricePerPerson, tipAmount: tipAmount, tipPercentage: tipPercentage, totalBill: totalBill, tipTier: tipComment)
                 self.tip = newTip
@@ -137,6 +140,19 @@ class MainViewController: UIViewController, BannerViewDelegate {
                 present(alertController, animated: true, completion: nil)
             }
         }
+    }
+
+    func loadSpinnerView() {
+        addChild(spinnerView)
+        spinnerView.view.frame = view.frame
+        view.addSubview(spinnerView.view)
+        spinnerView.didMove(toParent: self)
+    }
+    
+    func stopSpinnerView() {
+        spinnerView.willMove(toParent: nil)
+        spinnerView.view.removeFromSuperview()
+        spinnerView.removeFromParent()
     }
     
     func alertHandler(alert: UIAlertAction) {
@@ -317,5 +333,21 @@ extension MainViewController: UITextFieldDelegate {
         let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
 
         return updatedText.count <= 3
+    }
+}
+
+class SpinnerViewController: UIViewController {
+    var spinner = UIActivityIndicatorView(style: .large)
+
+    override func loadView() {
+        view = UIView()
+        view.backgroundColor = UIColor(white: 0, alpha: 0.7)
+
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        spinner.startAnimating()
+        view.addSubview(spinner)
+
+        spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        spinner.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
 }

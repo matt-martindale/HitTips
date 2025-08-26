@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreData
+import GoogleMobileAds
 
-class HistoryTableViewController: UITableViewController {
+class HistoryTableViewController: UITableViewController, BannerViewDelegate {
     
     lazy var fetchedResultsController: NSFetchedResultsController<Tip> = {
         
@@ -35,11 +36,26 @@ class HistoryTableViewController: UITableViewController {
         super.viewDidLoad()
         navigationController?.navigationBar.barTintColor = .black
         navigationController?.navigationBar.isTranslucent = false
+        setupHistoryPageGoogleBannerView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+    }
+
+    func setupHistoryPageGoogleBannerView() {
+        let bannerView = BannerView(adSize: AdSizeBanner)
+        bannerView.adUnitID = Keys.testAdUnit
+        bannerView.rootViewController = self
+        bannerView.delegate = self
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        NSLayoutConstraint.activate([
+          bannerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+          bannerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        ])
+        bannerView.load(Request())
     }
     
     @IBAction func deleteAllButtonTapped(_ sender: UIBarButtonItem) {
