@@ -79,7 +79,7 @@ class MainViewController: UIViewController, BannerViewDelegate {
     
     func setupGoogleBannerView() {
         let bannerView = BannerView(adSize: AdSizeBanner)
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = Keys.homePageAdUnit
         bannerView.rootViewController = self
         bannerView.delegate = self
         bannerView.translatesAutoresizingMaskIntoConstraints = false
