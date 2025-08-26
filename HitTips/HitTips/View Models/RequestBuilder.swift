@@ -29,13 +29,13 @@ class RequestBuilder {
         ]
         
         let parameters: [String: Any] = [
-            "model": "gpt-4o",
+            "model": StringSettings.aIModel,
             "messages":
                 [
                     [
                         "role": "system", "content": [[
                             "type": "text",
-                            "text": "Response should be short, creative, have one property and be in JSON format"
+                            "text": StringSettings.systemPrompt
                         ]]
                     ], [
                         "role": "user", "content": [[

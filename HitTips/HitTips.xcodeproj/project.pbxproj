@@ -14,6 +14,7 @@
 		C8C844772E5C170D00D17A2A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C844762E5C170D00D17A2A /* Keys.swift */; };
 		C8C844792E5C1DFB00D17A2A /* FetchTipCommentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C844782E5C1DFB00D17A2A /* FetchTipCommentManager.swift */; };
 		C8C8447C2E5E01E500D17A2A /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = C8C8447B2E5E01E500D17A2A /* GoogleMobileAds */; };
+		C8C8447E2E5E21BA00D17A2A /* StringSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C8447D2E5E21BA00D17A2A /* StringSettings.swift */; };
 		C9AE22C224CBF549003290A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22C124CBF549003290A0 /* AppDelegate.swift */; };
 		C9AE22C424CBF549003290A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22C324CBF549003290A0 /* SceneDelegate.swift */; };
 		C9AE22C924CBF549003290A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AE22C724CBF549003290A0 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		C8C844742E5C16ED00D17A2A /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		C8C844762E5C170D00D17A2A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		C8C844782E5C1DFB00D17A2A /* FetchTipCommentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTipCommentManager.swift; sourceTree = "<group>"; };
+		C8C8447D2E5E21BA00D17A2A /* StringSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSettings.swift; sourceTree = "<group>"; };
 		C9AE22BE24CBF549003290A0 /* HitTips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitTips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AE22C124CBF549003290A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9AE22C324CBF549003290A0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				C9AE22E024CBF90D003290A0 /* TipRepresentation.swift */,
 				C9AE22E124CBF90D003290A0 /* Tips.swift */,
 				C8C844762E5C170D00D17A2A /* Keys.swift */,
+				C8C8447D2E5E21BA00D17A2A /* StringSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				C9AE22DF24CBF8FE003290A0 /* AlertMessages.swift in Sources */,
 				C9AE22EA24CBF90D003290A0 /* CoreDataStack.swift in Sources */,
 				C9AE22F524CBF988003290A0 /* TipDetailViewController.swift in Sources */,
+				C8C8447E2E5E21BA00D17A2A /* StringSettings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

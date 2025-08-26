@@ -20,7 +20,7 @@ class FetchTipCommentManager {
     
     func fetchTipComment(_ tipPercentage: Int64) async -> String {
         
-        if let aiComment = try? await aiService.getAIResponse(prompt: "roast a tip someone left at a restaurant") {
+        if let aiComment = try? await aiService.getAIResponse(prompt: StringSettings.userPrompt) {
             let data = Data(aiComment.utf8)
             let tipComment = try? JSONDecoder().decode(TipComment.self, from: data)
             return extractComment(from: tipComment?.comment ?? tipController.fetchTipCommentFromLocal(tipPercentage: tipPercentage), tipPercentage)
