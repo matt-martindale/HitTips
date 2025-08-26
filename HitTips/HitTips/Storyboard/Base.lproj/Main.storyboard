@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c4y-vs-YmZ">
-                                <rect key="frame" x="70" y="153" width="250" height="90"/>
+                                <rect key="frame" x="70" y="183" width="250" height="90"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="CFy-Cz-s47">
                                         <rect key="frame" x="12" y="12" width="226" height="66"/>
@@ -68,16 +68,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BCV-Hg-G87" userLabel="People Picker">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="175"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YB3-q7-5du">
-                                                <rect key="frame" x="0.0" y="0.0" width="70" height="66"/>
-                                                <color key="tintColor" red="0.52549019610000003" green="0.84313725490000002" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" image="person.3.fill" catalog="system"/>
-                                                <connections>
-                                                    <action selector="personAmountButtonTapped:" destination="49U-g7-u9y" eventType="touchUpInside" id="Nuq-6L-Yg8"/>
-                                                </connections>
-                                            </button>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zfg-x3-FkZ">
-                                                <rect key="frame" x="0.0" y="66" width="70" height="85"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="85"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="85" id="7iu-sI-8Vd"/>
@@ -88,10 +80,10 @@
                                                 </connections>
                                             </pickerView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="qlV-L9-ZLe">
-                                                <rect key="frame" x="0.0" y="151" width="70" height="24"/>
+                                                <rect key="frame" x="0.0" y="85" width="70" height="90"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcH-Rp-5hX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="24"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="90"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="365-oc-FYa"/>
                                                         </constraints>
@@ -104,7 +96,7 @@
                                                         </state>
                                                     </button>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="Tpy-Xi-bZl">
-                                                        <rect key="frame" x="23" y="0.0" width="47" height="24"/>
+                                                        <rect key="frame" x="23" y="0.0" width="47" height="90"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="24" id="9Zp-5b-dAW"/>
@@ -123,6 +115,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="175" id="0BX-vQ-AbP"/>
                                             <constraint firstAttribute="width" constant="70" id="UYU-ac-D9a"/>
+                                            <constraint firstItem="Zfg-x3-FkZ" firstAttribute="top" secondItem="BCV-Hg-G87" secondAttribute="top" constant="30" id="s6j-i7-6Ew"/>
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0u-Zl-iZe">
@@ -173,20 +166,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4fE-xm-grl" userLabel="% Picker">
                                         <rect key="frame" x="260" y="0.0" width="70" height="175"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtN-GD-uHY">
-                                                <rect key="frame" x="0.0" y="0.0" width="70" height="66"/>
-                                                <color key="tintColor" red="0.52549019610000003" green="0.84313725490000002" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" image="percent" catalog="system">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
-                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                                    </preferredSymbolConfiguration>
-                                                </state>
-                                                <connections>
-                                                    <action selector="tipPercentageButtonTapped:" destination="49U-g7-u9y" eventType="touchUpInside" id="mMz-xV-UAu"/>
-                                                </connections>
-                                            </button>
                                             <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Bv-Mr-krm">
-                                                <rect key="frame" x="0.0" y="66" width="70" height="85"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="85"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="85" id="1TT-5x-7A8"/>
@@ -197,10 +178,10 @@
                                                 </connections>
                                             </pickerView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8aT-Ey-2nu">
-                                                <rect key="frame" x="0.0" y="151" width="70" height="24"/>
+                                                <rect key="frame" x="0.0" y="85" width="70" height="90"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15" borderStyle="roundedRect" textAlignment="right" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zNB-Yg-eBU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="24"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="90"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="RFK-ho-8rV"/>
@@ -214,7 +195,7 @@
                                                         </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRN-Ok-LYY">
-                                                        <rect key="frame" x="50" y="0.0" width="20" height="24"/>
+                                                        <rect key="frame" x="50" y="0.0" width="20" height="90"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="24" id="eZs-vR-a5N"/>
                                                             <constraint firstAttribute="width" constant="20" id="xtJ-Jx-GEn"/>
@@ -228,13 +209,17 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="6X0-u2-d9y"/>
+                                            <constraint firstItem="8Bv-Mr-krm" firstAttribute="top" secondItem="4fE-xm-grl" secondAttribute="top" constant="30" id="RgH-KS-dAW"/>
                                             <constraint firstAttribute="height" constant="175" id="bk9-00-e5m"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="BCV-Hg-G87" firstAttribute="top" secondItem="3hY-ot-5G6" secondAttribute="top" id="30f-1C-f0o"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Nwt-cH-8eR">
-                                <rect key="frame" x="20" y="468" width="350" height="120"/>
+                                <rect key="frame" x="20" y="448" width="350" height="120"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3r-F7-wBM">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="120"/>
@@ -370,7 +355,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hf-q2-kYO">
-                                <rect key="frame" x="115" y="618" width="160" height="40"/>
+                                <rect key="frame" x="115" y="598" width="160" height="40"/>
                                 <color key="backgroundColor" red="0.31764705882352939" green="0.6705882352941176" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Tmn-QU-F57"/>
@@ -391,7 +376,7 @@
                         <constraints>
                             <constraint firstItem="7hf-q2-kYO" firstAttribute="centerX" secondItem="EPN-qz-Aeu" secondAttribute="centerX" id="0nE-pP-8AK"/>
                             <constraint firstItem="c4y-vs-YmZ" firstAttribute="centerX" secondItem="EPN-qz-Aeu" secondAttribute="centerX" id="0sz-DG-ezY"/>
-                            <constraint firstItem="Nwt-cH-8eR" firstAttribute="top" secondItem="3hY-ot-5G6" secondAttribute="bottom" constant="50" id="EqW-ZT-78g"/>
+                            <constraint firstItem="Nwt-cH-8eR" firstAttribute="top" secondItem="3hY-ot-5G6" secondAttribute="bottom" constant="30" id="EqW-ZT-78g"/>
                             <constraint firstItem="Nwt-cH-8eR" firstAttribute="leading" secondItem="TOB-Hm-nxk" secondAttribute="leading" constant="20" id="FLh-Ba-2J6"/>
                             <constraint firstItem="3hY-ot-5G6" firstAttribute="leading" secondItem="TOB-Hm-nxk" secondAttribute="leading" constant="30" id="LH8-58-a79"/>
                             <constraint firstItem="3hY-ot-5G6" firstAttribute="centerY" secondItem="EPN-qz-Aeu" secondAttribute="centerY" constant="-50" id="QEx-X2-xXA"/>
@@ -399,7 +384,7 @@
                             <constraint firstItem="TOB-Hm-nxk" firstAttribute="trailing" secondItem="3hY-ot-5G6" secondAttribute="trailing" constant="30" id="X8K-aA-I1v"/>
                             <constraint firstItem="TOB-Hm-nxk" firstAttribute="trailing" secondItem="Nwt-cH-8eR" secondAttribute="trailing" constant="20" id="cpr-KY-bvl"/>
                             <constraint firstItem="TOB-Hm-nxk" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="7hf-q2-kYO" secondAttribute="bottom" constant="30" id="gWN-mG-Pmc"/>
-                            <constraint firstItem="3hY-ot-5G6" firstAttribute="top" secondItem="c4y-vs-YmZ" secondAttribute="bottom" id="jhQ-DT-O4T"/>
+                            <constraint firstItem="3hY-ot-5G6" firstAttribute="top" secondItem="c4y-vs-YmZ" secondAttribute="bottom" constant="-30" id="jhQ-DT-O4T"/>
                             <constraint firstItem="Nwt-cH-8eR" firstAttribute="centerX" secondItem="EPN-qz-Aeu" secondAttribute="centerX" id="qwn-eZ-g1J"/>
                         </constraints>
                     </view>
@@ -899,8 +884,6 @@
         <image name="arrow.up.square.fill" catalog="system" width="128" height="114"/>
         <image name="history_icon" width="25" height="25"/>
         <image name="home_icon" width="25" height="25"/>
-        <image name="percent" catalog="system" width="128" height="121"/>
-        <image name="person.3.fill" catalog="system" width="128" height="66"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
     </resources>
 </document>

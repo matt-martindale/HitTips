@@ -13,7 +13,7 @@ class AIService {
     private let requestBuilder = RequestBuilder()
     private let url = URL(string: "https://api.openai.com/v1/chat/completions")
     
-    func getAIResponse(prompt: String) async -> String {
+    func getAIResponse(prompt: String) async throws -> String {
         guard let request = requestBuilder.buildRequest(prompt: prompt, url: url) else { return "Failed to generate AI response" }
         
         do {

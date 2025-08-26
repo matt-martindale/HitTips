@@ -28,8 +28,6 @@
 		C9AE22EC24CBF90D003290A0 /* Date+Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22E424CBF90D003290A0 /* Date+Formatter.swift */; };
 		C9AE22ED24CBF90D003290A0 /* Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22E524CBF90D003290A0 /* Comments.swift */; };
 		C9AE22EE24CBF90D003290A0 /* Tip+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22E624CBF90D003290A0 /* Tip+Convenience.swift */; };
-		C9AE22EF24CBF90D003290A0 /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22E724CBF90D003290A0 /* Tip.swift */; };
-		C9AE22F124CBF914003290A0 /* Tip+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22F024CBF914003290A0 /* Tip+Codable.swift */; };
 		C9AE22F524CBF988003290A0 /* TipDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22F224CBF988003290A0 /* TipDetailViewController.swift */; };
 		C9AE22F624CBF988003290A0 /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22F324CBF988003290A0 /* HistoryTableViewController.swift */; };
 		C9AE22F724CBF988003290A0 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22F424CBF988003290A0 /* HistoryTableViewCell.swift */; };
@@ -59,8 +57,6 @@
 		C9AE22E424CBF90D003290A0 /* Date+Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Formatter.swift"; sourceTree = "<group>"; };
 		C9AE22E524CBF90D003290A0 /* Comments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comments.swift; sourceTree = "<group>"; };
 		C9AE22E624CBF90D003290A0 /* Tip+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tip+Convenience.swift"; sourceTree = "<group>"; };
-		C9AE22E724CBF90D003290A0 /* Tip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
-		C9AE22F024CBF914003290A0 /* Tip+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tip+Codable.swift"; sourceTree = "<group>"; };
 		C9AE22F224CBF988003290A0 /* TipDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipDetailViewController.swift; sourceTree = "<group>"; };
 		C9AE22F324CBF988003290A0 /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		C9AE22F424CBF988003290A0 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -138,8 +134,6 @@
 				C9AE22E224CBF90D003290A0 /* CoreDataStack.swift */,
 				C9AE22E424CBF90D003290A0 /* Date+Formatter.swift */,
 				C9AE22CA24CBF549003290A0 /* HitTips.xcdatamodeld */,
-				C9AE22E724CBF90D003290A0 /* Tip.swift */,
-				C9AE22F024CBF914003290A0 /* Tip+Codable.swift */,
 				C9AE22E624CBF90D003290A0 /* Tip+Convenience.swift */,
 				C9AE22E024CBF90D003290A0 /* TipRepresentation.swift */,
 				C9AE22E124CBF90D003290A0 /* Tips.swift */,
@@ -242,7 +236,6 @@
 				C8C844712E5C16B500D17A2A /* AIService.swift in Sources */,
 				C9AE22EC24CBF90D003290A0 /* Date+Formatter.swift in Sources */,
 				C9AE22EE24CBF90D003290A0 /* Tip+Convenience.swift in Sources */,
-				C9AE22F124CBF914003290A0 /* Tip+Codable.swift in Sources */,
 				C8C844792E5C1DFB00D17A2A /* FetchTipCommentManager.swift in Sources */,
 				C9AE22E824CBF90D003290A0 /* TipRepresentation.swift in Sources */,
 				C8C844772E5C170D00D17A2A /* APIKey.swift in Sources */,
@@ -257,7 +250,6 @@
 				C9AE22E924CBF90D003290A0 /* Tips.swift in Sources */,
 				C9AE22EB24CBF90D003290A0 /* TipController.swift in Sources */,
 				C9AE22DD24CBF75B003290A0 /* MainViewController.swift in Sources */,
-				C9AE22EF24CBF90D003290A0 /* Tip.swift in Sources */,
 				C9AE22DF24CBF8FE003290A0 /* AlertMessages.swift in Sources */,
 				C9AE22EA24CBF90D003290A0 /* CoreDataStack.swift in Sources */,
 				C9AE22F524CBF988003290A0 /* TipDetailViewController.swift in Sources */,

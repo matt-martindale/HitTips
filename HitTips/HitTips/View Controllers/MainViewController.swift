@@ -84,34 +84,36 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func confirmTipButtonTapped(_ sender: UIButton) {
-        if let billAmount = Double(billAmountTextField.text ?? ""),
-            let tipAmount = Double(tipAmountTextField.text ?? ""),
-            let tipPercentage = Int64(tipPercentageTextField.text ?? ""),
-            let party = Int64(personAmountTextField.text ?? ""),
-            let pricePerPerson = Double(pricePerPersonTextField.text ?? ""),
-            let totalBill = Double(totalAmountTextField.text ?? ""), billAmountTextField.text != "0.00" {
-            
-            let tipComment = tipCommentManager.fetchTipComment(tipPercentage)
-            
-            let newTip = Tip(billAmount: billAmount, party: party, pricePerPerson: pricePerPerson, tipAmount: tipAmount, tipPercentage: tipPercentage, totalBill: totalBill, tipTier: tipComment)
-            self.tip = newTip
-            
-            let context = CoreDataStack.shared.mainContext
-            
-            do {
-                try context.save()
-            } catch {
-                NSLog("Error saving context to persistent store")
-                context.reset()
+        Task { @MainActor in
+            if let billAmount = Double(billAmountTextField.text ?? ""),
+               let tipAmount = Double(tipAmountTextField.text ?? ""),
+               let tipPercentage = Int64(tipPercentageTextField.text ?? ""),
+               let party = Int64(personAmountTextField.text ?? ""),
+               let pricePerPerson = Double(pricePerPersonTextField.text ?? ""),
+               let totalBill = Double(totalAmountTextField.text ?? ""), billAmountTextField.text != "0.00" {
+                
+                let tipComment = await tipCommentManager.fetchTipComment(tipPercentage)
+                
+                let newTip = Tip(billAmount: billAmount, party: party, pricePerPerson: pricePerPerson, tipAmount: tipAmount, tipPercentage: tipPercentage, totalBill: totalBill, tipTier: tipComment)
+                self.tip = newTip
+                
+                let context = CoreDataStack.shared.mainContext
+                
+                do {
+                    try context.save()
+                } catch {
+                    NSLog("Error saving context to persistent store")
+                    context.reset()
+                }
+                
+            } else {
+                
+                let alertController = UIAlertController(title: "Fill in all fields", message: "\(alertMessages.messages.randomElement() ?? "Smarty-pants")", preferredStyle: .actionSheet)
+                let okAction = UIAlertAction(title: "Okay", style: .cancel, handler: alertHandler)
+                okAction.setValue(UIColor.black, forKey: "titleTextColor")
+                alertController.addAction(okAction)
+                present(alertController, animated: true, completion: nil)
             }
-            
-        } else {
-            
-            let alertController = UIAlertController(title: "Fill in all fields", message: "\(alertMessages.messages.randomElement() ?? "Smarty-pants")", preferredStyle: .actionSheet)
-            let okAction = UIAlertAction(title: "Okay", style: .cancel, handler: alertHandler)
-            okAction.setValue(UIColor.black, forKey: "titleTextColor")
-            alertController.addAction(okAction)
-            present(alertController, animated: true, completion: nil)
         }
     }
     

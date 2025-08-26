@@ -18,10 +18,50 @@ class RequestBuilder {
         request.addValue("Bearer \(APIKey.apiKey)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
+        let jsonSchema: [String: Any] = [
+            "type": "object",
+            "strict": true,
+            "additionalProperties": false,
+            "properties": [
+                "comment": ["type": "string"],
+            ],
+            "required": ["comment"]
+        ]
+//        let messages = [
+//            MessageRequest(role: "system", content:
+//                            [Content(type: "text", text: "Make a quick roast of a tip made at a restaurant. Response should be in JSON format")]),
+//            MessageRequest(role: "user", content:
+//                            [Content(type: "text", text: "roast 15% tip")])
+//        ]
+//        
+//        let encoder = JSONEncoder()
+//        encoder.outputFormatting = .prettyPrinted
+//        
+//        guard let jsonMessage = try? encoder.encode(messages) else { return nil }
+        
         let parameters: [String: Any] = [
             "model": "gpt-4o-mini",
-            "messages": [
-                ["role": "user", "content": prompt]
+            "messages":
+                [
+                    [
+                        "role": "system", "content": [[
+                            "type": "text",
+                            "text": "Response should have one property and be in JSON format"
+                        ]]
+                    ], [
+                        "role": "user", "content": [[
+                            "type": "text",
+                            "text": prompt
+                        ]]
+                    ]
+                ]
+            ,
+            "response_format": [
+                "type": "json_schema",
+                "json_schema": [
+                    "name": "comment_schema",
+                    "schema": jsonSchema
+                ]
             ]
         ]
         guard let jsonData = try? JSONSerialization.data(withJSONObject: parameters) else { return nil }

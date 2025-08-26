@@ -32,3 +32,13 @@ struct Message: Codable {
 struct AIError: Codable {
     let message: String?
 }
+
+struct MessageRequest: Codable {
+    let role: String
+    let content: [Content]
+}
+
+struct Content: Codable {
+    let type: String
+    let text: String
+}
