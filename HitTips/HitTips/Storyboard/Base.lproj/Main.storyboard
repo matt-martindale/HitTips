@@ -69,10 +69,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="175"/>
                                         <subviews>
                                             <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zfg-x3-FkZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="70" height="85"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="120"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="85" id="7iu-sI-8Vd"/>
+                                                    <constraint firstAttribute="height" constant="120" id="7iu-sI-8Vd"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="dataSource" destination="49U-g7-u9y" id="4Kx-g1-muY"/>
@@ -80,10 +80,10 @@
                                                 </connections>
                                             </pickerView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="qlV-L9-ZLe">
-                                                <rect key="frame" x="0.0" y="85" width="70" height="90"/>
+                                                <rect key="frame" x="0.0" y="120" width="70" height="55"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcH-Rp-5hX">
-                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="90"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="20" height="55"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="20" id="365-oc-FYa"/>
                                                         </constraints>
@@ -96,7 +96,7 @@
                                                         </state>
                                                     </button>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="Tpy-Xi-bZl">
-                                                        <rect key="frame" x="23" y="0.0" width="47" height="90"/>
+                                                        <rect key="frame" x="23" y="0.0" width="47" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="24" id="9Zp-5b-dAW"/>
@@ -115,7 +115,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="175" id="0BX-vQ-AbP"/>
                                             <constraint firstAttribute="width" constant="70" id="UYU-ac-D9a"/>
-                                            <constraint firstItem="Zfg-x3-FkZ" firstAttribute="top" secondItem="BCV-Hg-G87" secondAttribute="top" constant="30" id="s6j-i7-6Ew"/>
+                                            <constraint firstItem="Zfg-x3-FkZ" firstAttribute="top" secondItem="BCV-Hg-G87" secondAttribute="top" constant="15" id="s6j-i7-6Ew"/>
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o0u-Zl-iZe">
@@ -167,10 +167,10 @@
                                         <rect key="frame" x="260" y="0.0" width="70" height="175"/>
                                         <subviews>
                                             <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Bv-Mr-krm">
-                                                <rect key="frame" x="0.0" y="0.0" width="70" height="85"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="120"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="85" id="1TT-5x-7A8"/>
+                                                    <constraint firstAttribute="height" constant="120" id="1TT-5x-7A8"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="dataSource" destination="49U-g7-u9y" id="ugK-EN-em8"/>
@@ -178,10 +178,10 @@
                                                 </connections>
                                             </pickerView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8aT-Ey-2nu">
-                                                <rect key="frame" x="0.0" y="85" width="70" height="90"/>
+                                                <rect key="frame" x="0.0" y="120" width="70" height="55"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15" borderStyle="roundedRect" textAlignment="right" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zNB-Yg-eBU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="90"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="55"/>
                                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="50" id="RFK-ho-8rV"/>
@@ -195,7 +195,7 @@
                                                         </connections>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRN-Ok-LYY">
-                                                        <rect key="frame" x="50" y="0.0" width="20" height="90"/>
+                                                        <rect key="frame" x="50" y="0.0" width="20" height="55"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="24" id="eZs-vR-a5N"/>
                                                             <constraint firstAttribute="width" constant="20" id="xtJ-Jx-GEn"/>
@@ -209,7 +209,7 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="6X0-u2-d9y"/>
-                                            <constraint firstItem="8Bv-Mr-krm" firstAttribute="top" secondItem="4fE-xm-grl" secondAttribute="top" constant="30" id="RgH-KS-dAW"/>
+                                            <constraint firstItem="8Bv-Mr-krm" firstAttribute="top" secondItem="4fE-xm-grl" secondAttribute="top" constant="15" id="RgH-KS-dAW"/>
                                             <constraint firstAttribute="height" constant="175" id="bk9-00-e5m"/>
                                         </constraints>
                                     </stackView>
