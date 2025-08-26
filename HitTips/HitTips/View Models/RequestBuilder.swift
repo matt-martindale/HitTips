@@ -35,7 +35,7 @@ class RequestBuilder {
                     [
                         "role": "system", "content": [[
                             "type": "text",
-                            "text": "Response should be short, creative and have one property and be in JSON format"
+                            "text": "Response should be short, creative, have one property and be in JSON format"
                         ]]
                     ], [
                         "role": "user", "content": [[

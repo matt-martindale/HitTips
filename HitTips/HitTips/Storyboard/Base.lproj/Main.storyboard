@@ -219,7 +219,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Nwt-cH-8eR">
-                                <rect key="frame" x="20" y="448" width="350" height="120"/>
+                                <rect key="frame" x="20" y="428" width="350" height="120"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3r-F7-wBM">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="120"/>
@@ -355,7 +355,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hf-q2-kYO">
-                                <rect key="frame" x="115" y="598" width="160" height="40"/>
+                                <rect key="frame" x="115" y="578" width="160" height="40"/>
                                 <color key="backgroundColor" red="0.31764705882352939" green="0.6705882352941176" blue="0.41960784313725491" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Tmn-QU-F57"/>
@@ -375,7 +375,7 @@
                         <constraints>
                             <constraint firstItem="7hf-q2-kYO" firstAttribute="centerX" secondItem="EPN-qz-Aeu" secondAttribute="centerX" id="0nE-pP-8AK"/>
                             <constraint firstItem="c4y-vs-YmZ" firstAttribute="centerX" secondItem="EPN-qz-Aeu" secondAttribute="centerX" id="0sz-DG-ezY"/>
-                            <constraint firstItem="Nwt-cH-8eR" firstAttribute="top" secondItem="3hY-ot-5G6" secondAttribute="bottom" constant="30" id="EqW-ZT-78g"/>
+                            <constraint firstItem="Nwt-cH-8eR" firstAttribute="top" secondItem="3hY-ot-5G6" secondAttribute="bottom" constant="10" id="EqW-ZT-78g"/>
                             <constraint firstItem="Nwt-cH-8eR" firstAttribute="leading" secondItem="TOB-Hm-nxk" secondAttribute="leading" constant="20" id="FLh-Ba-2J6"/>
                             <constraint firstItem="3hY-ot-5G6" firstAttribute="leading" secondItem="TOB-Hm-nxk" secondAttribute="leading" constant="30" id="LH8-58-a79"/>
                             <constraint firstItem="3hY-ot-5G6" firstAttribute="centerY" secondItem="EPN-qz-Aeu" secondAttribute="centerY" constant="-50" id="QEx-X2-xXA"/>

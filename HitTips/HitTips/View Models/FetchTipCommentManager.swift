@@ -23,7 +23,7 @@ class FetchTipCommentManager {
         if let aiComment = try? await aiService.getAIResponse(prompt: "roast a tip someone left at a restaurant") {
             let data = Data(aiComment.utf8)
             let tipComment = try? JSONDecoder().decode(TipComment.self, from: data)
-            return extractComment(from: tipComment?.comment ?? "Be better", tipPercentage)
+            return extractComment(from: tipComment?.comment ?? tipController.fetchTipCommentFromLocal(tipPercentage: tipPercentage), tipPercentage)
         } else {
             return tipController.fetchTipCommentFromLocal(tipPercentage: tipPercentage)
         }
