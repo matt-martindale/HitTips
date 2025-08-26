@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, BannerViewDelegate {
 
     // MARK: -Properties
     var tipController = TipController()
@@ -38,6 +39,7 @@ class MainViewController: UIViewController {
         tipPercentagePickerView.selectRow(tipController.tipPercentage.count - 11, inComponent: 0, animated: true)
         createToolbar()
         addTapGesture()
+        setupGoogleBannerView()
     }
     
     override func viewWillLayoutSubviews() {
@@ -73,6 +75,20 @@ class MainViewController: UIViewController {
         
         calculateTipButton.layer.cornerRadius = 10
         calculateTipButton.layer.masksToBounds = true
+    }
+    
+    func setupGoogleBannerView() {
+        let bannerView = BannerView(adSize: AdSizeBanner)
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.delegate = self
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(bannerView)
+        NSLayoutConstraint.activate([
+          bannerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+          bannerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        ])
+        bannerView.load(Request())
     }
     
     @IBAction func personAmountButtonTapped(_ sender: UIButton) {
