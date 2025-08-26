@@ -33,7 +33,17 @@ class Comments {
         "This tip could single-handedly fund a trip... to the vending machine.",
         "I've seen bigger tips in fortune cookies!",
         "This tip is as underwhelming as a flat soda.",
-        "I was expecting a tip, not a punctuation mark."
+        "I was expecting a tip, not a punctuation mark.",
+        "Your tip was so low, it needs to take the elevator to reach zero.",
+        "I can only assume that your tip took a vow of poverty.",
+        "Your tip was so small, it got mistaken for pocket lint.",
+        "I've seen pennies more motivated to roll out than your tip.",
+        "Even Scrooge is thinking your tip lacks generosity.",
+        "If your wallet was any tighter, it would need a shoehorn to get a penny out!",
+        "I've seen fortunes in a cookie that tipped better than you!",
+        "Your generosity is about as satisfying as a flat soda.",
+        "You left a tip so small, even a microchip would feel claustrophobic.",
+        "That tip was so tiny, it needs a microscope and a rescue team!"
     ]
     
     let midTier: [String] = [
