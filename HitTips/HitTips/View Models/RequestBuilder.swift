@@ -27,26 +27,15 @@ class RequestBuilder {
             ],
             "required": ["comment"]
         ]
-//        let messages = [
-//            MessageRequest(role: "system", content:
-//                            [Content(type: "text", text: "Make a quick roast of a tip made at a restaurant. Response should be in JSON format")]),
-//            MessageRequest(role: "user", content:
-//                            [Content(type: "text", text: "roast 15% tip")])
-//        ]
-//        
-//        let encoder = JSONEncoder()
-//        encoder.outputFormatting = .prettyPrinted
-//        
-//        guard let jsonMessage = try? encoder.encode(messages) else { return nil }
         
         let parameters: [String: Any] = [
-            "model": "gpt-4o-mini",
+            "model": "gpt-4o",
             "messages":
                 [
                     [
                         "role": "system", "content": [[
                             "type": "text",
-                            "text": "Response should have one property and be in JSON format"
+                            "text": "Response should be short, creative and have one property and be in JSON format"
                         ]]
                     ], [
                         "role": "user", "content": [[
