@@ -43,11 +43,11 @@ class TipController {
             return getRandomComment(tipTier: .sixtyNine)
         case 666:
             return getRandomComment(tipTier: .sixsixsix)
-        case 0...10:
+        case 0...15:
             return getRandomComment(tipTier: .lowTier)
-        case 11...20:
+        case 16...30:
             return getRandomComment(tipTier: .midTier)
-        case 21...999:
+        case 31...999:
             return getRandomComment(tipTier: .highTier)
         case ...(-1):
             return getRandomComment(tipTier: .negativeHacker)
