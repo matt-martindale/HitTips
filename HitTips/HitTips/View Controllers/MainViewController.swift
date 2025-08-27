@@ -127,20 +127,18 @@ class MainViewController: UIViewController, BannerViewDelegate {
                let totalBill = Double(totalAmountTextField.text ?? ""), billAmountTextField.text != "0.00" {
                 
                 loadSpinnerView()
+                
+                self.interstitialAd?.fullScreenContentDelegate = self
+                // Present the ad once it has been loaded.
+                self.interstitialAd?.present(from: self)
+                
                 let tipComment = await tipCommentManager.fetchTipComment(tipPercentage)
                 stopSpinnerView()
                 
                 let newTip = Tip(billAmount: billAmount, party: party, pricePerPerson: pricePerPerson, tipAmount: tipAmount, tipPercentage: tipPercentage, totalBill: totalBill, tipTier: tipComment)
                 self.tip = newTip
                 
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let detailVC = storyboard.instantiateViewController(withIdentifier: "TipDetailViewController") as! TipDetailViewController
-                detailVC.tipController = tipController
-                detailVC.interstitialAd = self.interstitialAd
-                detailVC.tip = self.tip
-                detailVC.reloadAdDelegate = self
-                self.present(detailVC, animated: true)
-                
+                navigateToDetailVC()
                 let context = CoreDataStack.shared.mainContext
                 
                 do {
@@ -159,6 +157,15 @@ class MainViewController: UIViewController, BannerViewDelegate {
                 present(alertController, animated: true, completion: nil)
             }
         }
+    }
+    
+    func navigateToDetailVC() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailVC = storyboard.instantiateViewController(withIdentifier: "TipDetailViewController") as! TipDetailViewController
+        detailVC.tipController = tipController
+        detailVC.tip = self.tip
+        detailVC.reloadAdDelegate = self
+        self.present(detailVC, animated: true)
     }
 
     func loadSpinnerView() {
@@ -352,6 +359,13 @@ extension MainViewController: UITextFieldDelegate {
         let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
 
         return updatedText.count <= 3
+    }
+}
+
+extension MainViewController: FullScreenContentDelegate {
+    func adDidDismissFullScreenContent(_ ad: any FullScreenPresentingAd) {
+        navigateToDetailVC()
+        loadInterstitial()
     }
 }
 

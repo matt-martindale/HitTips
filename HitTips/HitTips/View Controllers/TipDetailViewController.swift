@@ -17,7 +17,6 @@ class TipDetailViewController: UIViewController {
     
     var tipController: TipController?
     var tip: Tip?
-    var interstitialAd: InterstitialAd?
     var reloadAdDelegate: ReloadInterstitialAdDelegate?
     
     @IBOutlet weak var commentTextView: UITextView!
@@ -32,10 +31,6 @@ class TipDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        showInterstitialAd()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -58,13 +53,6 @@ class TipDetailViewController: UIViewController {
             totalBillLabel.text = "$" + String(format: "%.2f", totalBill)
             commentTextView.text = comment
         }
-    }
-    
-    func showInterstitialAd() {
-        self.interstitialAd?.fullScreenContentDelegate = self
-        
-        // Present the ad once it has been loaded.
-        self.interstitialAd?.present(from: self)
     }
 }
 
