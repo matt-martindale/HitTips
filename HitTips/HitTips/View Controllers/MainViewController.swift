@@ -75,7 +75,12 @@ class MainViewController: UIViewController, BannerViewDelegate {
         totalAmountTextField.layer.masksToBounds = true
         
         tipPercentageTextField.layer.borderWidth = 1
+        tipPercentageTextField.layer.cornerRadius = 10
+        tipPercentageTextField.layer.masksToBounds = true
         personAmountTextField.layer.borderWidth = 1
+        personAmountTextField.layer.cornerRadius = 10
+        personAmountTextField.layer.masksToBounds = true
+        
         
         
         calculateTipButton.layer.cornerRadius = 10
