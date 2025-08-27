@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import GoogleMobileAds
+
+protocol ReloadInterstitialAdDelegate {
+    func reloadAd()
+}
 
 class TipDetailViewController: UIViewController {
     
     var tipController: TipController?
     var tip: Tip?
+    var interstitialAd: InterstitialAd?
+    var reloadAdDelegate: ReloadInterstitialAdDelegate?
     
     @IBOutlet weak var commentTextView: UITextView!
     @IBOutlet weak var billAmountLabel: UILabel!
@@ -21,20 +28,28 @@ class TipDetailViewController: UIViewController {
     @IBOutlet weak var pricePerPersonLabel: UILabel!
     @IBOutlet weak var totalBillLabel: UILabel!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        showInterstitialAd()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        reloadAdDelegate?.reloadAd()
+    }
+    
     func updateViews() {
         if let billAmount = tip?.billAmount,
-            let tipAmount = tip?.tipAmount,
-            let tipPercentage = tip?.tipPercentage,
-            let party = tip?.party,
-            let pricerPerPerson = tip?.pricePerPerson,
-            let totalBill = tip?.totalBill,
-            let comment = tip?.tipTier {
+           let tipAmount = tip?.tipAmount,
+           let tipPercentage = tip?.tipPercentage,
+           let party = tip?.party,
+           let pricerPerPerson = tip?.pricePerPerson,
+           let totalBill = tip?.totalBill,
+           let comment = tip?.tipTier {
             billAmountLabel.text = "$" + String(format: "%.2f", billAmount)
             tipAmountLabel.text = "$" + String(format: "%.2f", tipAmount)
             tipPercentageLabel.text = String(tipPercentage) + "%"
@@ -44,5 +59,18 @@ class TipDetailViewController: UIViewController {
             commentTextView.text = comment
         }
     }
-
+    
+    func showInterstitialAd() {
+        self.interstitialAd?.fullScreenContentDelegate = self
+        
+        // Present the ad once it has been loaded.
+        self.interstitialAd?.present(from: self)
+    }
 }
+
+extension TipDetailViewController: FullScreenContentDelegate {
+    func adDidDismissFullScreenContent(_ ad: any FullScreenPresentingAd) {
+        reloadAdDelegate?.reloadAd()
+    }
+}
+

@@ -15,8 +15,10 @@ class MainViewController: UIViewController, BannerViewDelegate {
     var tipController = TipController()
     let alertMessages = AlertMessages()
     let tipCommentManager = FetchTipCommentManager()
+    let fireStoreManager = FirestoreManager()
     var tip: Tip?
     let spinnerView = SpinnerViewController()
+    var interstitialAd: InterstitialAd?
     
     // MARK: -IBOutlets
     @IBOutlet weak var billAmountView: UIView!
@@ -35,12 +37,14 @@ class MainViewController: UIViewController, BannerViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        fireStoreManager.fetchAiApiKey()
         billAmountTextField.becomeFirstResponder()
         personAmountPickerView.selectRow(tipController.personAmount.count - 1, inComponent: 0, animated: true)
         tipPercentagePickerView.selectRow(tipController.tipPercentage.count - 11, inComponent: 0, animated: true)
         createToolbar()
         addTapGesture()
         setupHomePageGoogleBannerView()
+        loadInterstitial()
     }
     
     override func viewWillLayoutSubviews() {
@@ -92,6 +96,19 @@ class MainViewController: UIViewController, BannerViewDelegate {
         bannerView.load(Request())
     }
     
+    private func loadInterstitial() {
+        let request = Request()
+        InterstitialAd.load(with: "ca-app-pub-3940256099942544/4411468910", request: request) { [weak self] ad, error in
+            guard let self = self else { return }
+            if let error = error {
+                print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                return
+            }
+            // Ad was loaded successfully. Assign it and set the delegate.
+            self.interstitialAd = ad
+        }
+    }
+    
     @IBAction func personAmountButtonTapped(_ sender: UIButton) {
         personAmountTextField.becomeFirstResponder()
     }
@@ -119,7 +136,9 @@ class MainViewController: UIViewController, BannerViewDelegate {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let detailVC = storyboard.instantiateViewController(withIdentifier: "TipDetailViewController") as! TipDetailViewController
                 detailVC.tipController = tipController
+                detailVC.interstitialAd = self.interstitialAd
                 detailVC.tip = self.tip
+                detailVC.reloadAdDelegate = self
                 self.present(detailVC, animated: true)
                 
                 let context = CoreDataStack.shared.mainContext
@@ -333,6 +352,12 @@ extension MainViewController: UITextFieldDelegate {
         let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
 
         return updatedText.count <= 3
+    }
+}
+
+extension MainViewController: ReloadInterstitialAdDelegate {
+    func reloadAd() {
+        loadInterstitial()
     }
 }
 

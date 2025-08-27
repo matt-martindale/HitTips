@@ -35,6 +35,21 @@ class TipController {
         return tipPercentage.reversed()
     }
     
+    func returnPromptRoastingTier(_ tipPercentage: Int64) -> String {
+        switch tipPercentage {
+        case 0...10:
+            "terrible"
+        case 11...19:
+            "bad"
+        case 20...29:
+            "decent"
+        case 30...999:
+            "good"
+        default:
+            "bad"
+        }
+    }
+    
     func fetchTipCommentFromLocal(tipPercentage: Int64) -> String {
         switch tipPercentage {
         case 420:

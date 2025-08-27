@@ -20,7 +20,8 @@ class FetchTipCommentManager {
     
     func fetchTipComment(_ tipPercentage: Int64) async -> String {
         
-        if let aiComment = try? await aiService.getAIResponse(prompt: StringSettings.userPrompt) {
+        let prompt = String(format: StringSettings.userPrompt, tipController.returnPromptRoastingTier(tipPercentage))
+        if let aiComment = try? await aiService.getAIResponse(prompt: prompt) {
             let data = Data(aiComment.utf8)
             let tipComment = try? JSONDecoder().decode(TipComment.self, from: data)
             return extractComment(from: tipComment?.comment ?? tipController.fetchTipCommentFromLocal(tipPercentage: tipPercentage), tipPercentage)
@@ -30,7 +31,7 @@ class FetchTipCommentManager {
     }
     
     fileprivate func extractComment(from aiComment: String, _ tipPercentage: Int64) -> String {
-        if aiComment.contains("\"roast\"") || aiComment.contains("\"message\"") || aiComment.contains("\"comment\"") {
+        if aiComment.contains("\"roast\"") || aiComment.contains("\"message\"") || aiComment.contains("\"comment\"") || aiComment.contains("\"tip\"") {
             return tipController.fetchTipCommentFromLocal(tipPercentage: tipPercentage)
         } else {
             return aiComment
