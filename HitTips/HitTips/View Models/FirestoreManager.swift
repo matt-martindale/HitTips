@@ -11,50 +11,44 @@ import Firebase
 
 class FirestoreManager {
     let userDefaults = UserDefaults.standard
+    let aiModelString = "aiModel"
     let adFrequencyString = "adFrequency"
     let adCountString = "adCount"
     
-    func shouldShowAd() -> Bool {
-        let adCount = fetchAdCountFromUserDefaults()
-        let adFrequency = fetchAdFrequencyFromUserDefaults()
-        return adCount >= adFrequency
+    init() {
+        fetchAppSettingsAndSaveToUserDefaults()
     }
     
-    func saveAdFrequency() {
-        fetchAdFrequency { [weak self] adFrequency in
-            guard let adFrequency = adFrequency,
-            let self = self else {
-                self?.updateAdFrequencyToUserDefaults(3)
-                return
-            }
-            self.updateAdFrequencyToUserDefaults(adFrequency)
-        }
-    }
-
-    fileprivate func fetchAdFrequency(completion: @escaping (Int?) -> Void) {
+    func fetchAppSettingsAndSaveToUserDefaults() {
         let db = Firestore.firestore()
         
-        db.collection("adFrequency").document(Keys.adFrequencyId).getDocument { document, error in
+        db.collection("appSettings").document(Keys.firestoreAppSettings).getDocument { [weak self] document, error in
             guard error == nil else {
                 print(error?.localizedDescription as Any)
-                completion(nil)
                 return
             }
             
             if let document = document, document.exists {
                 guard let data = document.data() else {
                     print("Error encoding Data")
-                    completion(nil)
                     return
                 }
                 
-                guard let adFrequency = data["adFrequency"] as? Int else {
-                    completion(nil)
-                    return
-                }
-                completion(adFrequency)
+                // map app settings and provide default value
+                let aiModel = data["aiModel"] as? String ?? "gpt-4o-mini"
+                let adFrequency = data["adFrequency"] as? Int ?? 2
+                
+                print("AI model:\(aiModel), Ad frequency:\(adFrequency)")
+                
+                // Save to user defaults
+                self?.updateAiModelToUserDefaults(aiModel)
+                self?.updateAdFrequencyToUserDefaults(adFrequency)
             }
         }
+    }
+    
+    private func updateAiModelToUserDefaults(_ aiModel: String) {
+        userDefaults.set(aiModel, forKey: aiModelString)
     }
     
     private func updateAdFrequencyToUserDefaults(_ adFrequency: Int) {
@@ -73,6 +67,12 @@ class FirestoreManager {
         var adCount = fetchAdCountFromUserDefaults()
         adCount += 1
         userDefaults.set(adCount, forKey: adCountString)
+    }
+    
+    func shouldShowAd() -> Bool {
+        let adCount = fetchAdCountFromUserDefaults()
+        let adFrequency = fetchAdFrequencyFromUserDefaults()
+        return adCount >= adFrequency
     }
     
     func resetAdCount() {

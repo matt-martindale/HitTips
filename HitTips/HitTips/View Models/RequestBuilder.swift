@@ -13,6 +13,8 @@ class RequestBuilder {
     
     func buildRequest(prompt: String, url: URL?) -> URLRequest? {
         guard let apiUrl = url else { return nil }
+        let userDefaults = UserDefaults.standard
+        let aiModel = userDefaults.value(forKey: "aiModel") as! String
         
         var request = URLRequest(url: apiUrl)
         request.httpMethod = "POST"
@@ -30,7 +32,7 @@ class RequestBuilder {
         ]
         
         let parameters: [String: Any] = [
-            "model": StringSettings.aIModel,
+            "model": aiModel,
             "messages":
                 [
                     [

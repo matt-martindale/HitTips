@@ -44,7 +44,6 @@ class MainViewController: UIViewController, BannerViewDelegate {
         addTapGesture()
         setupHomePageGoogleBannerView()
         loadInterstitial()
-        fireStoreManager.saveAdFrequency()
     }
     
     override func viewWillLayoutSubviews() {
@@ -89,7 +88,7 @@ class MainViewController: UIViewController, BannerViewDelegate {
     
     func setupHomePageGoogleBannerView() {
         let bannerView = BannerView(adSize: AdSizeBanner)
-        bannerView.adUnitID = Keys.testAdUnit
+        bannerView.adUnitID = Keys.bannerAdUnitTEST
         bannerView.rootViewController = self
         bannerView.delegate = self
         bannerView.translatesAutoresizingMaskIntoConstraints = false
@@ -103,7 +102,7 @@ class MainViewController: UIViewController, BannerViewDelegate {
     
     private func loadInterstitial() {
         let request = Request()
-        InterstitialAd.load(with: "ca-app-pub-3940256099942544/4411468910", request: request) { [weak self] ad, error in
+        InterstitialAd.load(with: Keys.interstitialAdUnitTEST, request: request) { [weak self] ad, error in
             guard let self = self else { return }
             if let error = error {
                 print("Failed to load interstitial ad with error: \(error.localizedDescription)")
@@ -171,6 +170,7 @@ class MainViewController: UIViewController, BannerViewDelegate {
         detailVC.interstitialAdDelegate = self
         fireStoreManager.incrementAdCount()
         print(fireStoreManager.fetchAdCountFromUserDefaults())
+        print(fireStoreManager.fetchAdFrequencyFromUserDefaults())
         self.present(detailVC, animated: true)
     }
 

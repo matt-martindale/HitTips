@@ -46,7 +46,7 @@ class HistoryTableViewController: UITableViewController, BannerViewDelegate {
 
     func setupHistoryPageGoogleBannerView() {
         let bannerView = BannerView(adSize: AdSizeBanner)
-        bannerView.adUnitID = Keys.testAdUnit
+        bannerView.adUnitID = Keys.bannerAdUnitTEST
         bannerView.rootViewController = self
         bannerView.delegate = self
         bannerView.translatesAutoresizingMaskIntoConstraints = false
