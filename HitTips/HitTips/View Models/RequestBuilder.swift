@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ConfidentialKit
 
 class RequestBuilder {
     
@@ -15,7 +16,7 @@ class RequestBuilder {
         
         var request = URLRequest(url: apiUrl)
         request.httpMethod = "POST"
-        request.addValue("Bearer \(Keys.apiKey)", forHTTPHeaderField: "Authorization")
+        request.addValue("Bearer \(Secrets.$apiKey)", forHTTPHeaderField: "Authorization")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let jsonSchema: [String: Any] = [

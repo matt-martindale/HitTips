@@ -133,7 +133,9 @@ class Comments {
         "Wow, that tip is so big it needs its own parking space!",
         "Is that tip or did the bank have a glitch and accidentally transfer their savings?",
         "Looks like this tip is auditioning for a role in 'Richie Rich: The Sequel'!",
-        "With a tip that generous, even the receipt feels like it should be framed!"
+        "With a tip that generous, even the receipt feels like it should be framed!",
+        "You’re not a legend, bro — you’re just the human version of a participation trophy with a pen.",
+        "Newsflash: nobody’s naming a holiday after you — you’re just a clown making it rain Monopoly money and calling it charity."
     ]
     
     let fourTwentyTier: [String] = [

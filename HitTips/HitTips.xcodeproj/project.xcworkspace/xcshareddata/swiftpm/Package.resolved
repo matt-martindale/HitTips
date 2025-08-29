@@ -1,5 +1,5 @@
 {
-  "originHash" : "b5cdaebb3d8e2003f948fa37641a6eea93ff23dfb0decf57449834099bef23dd",
+  "originHash" : "178f2709410831daeca35fc57349f3f814e16b7510f676090aa3cc0972f2303c",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -119,6 +119,24 @@
       }
     },
     {
+      "identity" : "swift-confidential",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/securevale/swift-confidential",
+      "state" : {
+        "revision" : "7f571ab0df5b0ffd4b26b92b9dd8f21d6b3a6ca8",
+        "version" : "0.4.1"
+      }
+    },
+    {
+      "identity" : "swift-confidential-plugin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/securevale/swift-confidential-plugin",
+      "state" : {
+        "revision" : "9bf4fb3c87a769e13557aa1b564d7c66d74423b4",
+        "version" : "0.4.1"
+      }
+    },
+    {
       "identity" : "swift-package-manager-google-mobile-ads",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/googleads/swift-package-manager-google-mobile-ads.git",
@@ -143,6 +161,15 @@
       "state" : {
         "revision" : "e3f69fd321d0c9fcdc16fb576a0cdd956675face",
         "version" : "1.31.0"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-syntax.git",
+      "state" : {
+        "revision" : "f99ae8aa18f0cf0d53481901f88a0991dc3bd4a2",
+        "version" : "601.0.1"
       }
     }
   ],

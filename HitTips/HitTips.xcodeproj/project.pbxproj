@@ -20,6 +20,7 @@
 		C8C844852E5E5B9300D17A2A /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = C8C844842E5E5B9300D17A2A /* FirebaseDatabase */; };
 		C8C844872E5E5B9300D17A2A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C8C844862E5E5B9300D17A2A /* FirebaseFirestore */; };
 		C8C844892E5E5D0A00D17A2A /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C844882E5E5D0A00D17A2A /* FirestoreManager.swift */; };
+		C8C8448E2E613E0F00D17A2A /* ConfidentialKit in Frameworks */ = {isa = PBXBuildFile; productRef = C8C8448D2E613E0F00D17A2A /* ConfidentialKit */; };
 		C9AE22C224CBF549003290A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22C124CBF549003290A0 /* AppDelegate.swift */; };
 		C9AE22C424CBF549003290A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22C324CBF549003290A0 /* SceneDelegate.swift */; };
 		C9AE22C924CBF549003290A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9AE22C724CBF549003290A0 /* Main.storyboard */; };
@@ -77,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8C8448E2E613E0F00D17A2A /* ConfidentialKit in Frameworks */,
 				C8C844852E5E5B9300D17A2A /* FirebaseDatabase in Frameworks */,
 				C8C844872E5E5B9300D17A2A /* FirebaseFirestore in Frameworks */,
 				C8C844832E5E5B9300D17A2A /* FirebaseCore in Frameworks */,
@@ -192,6 +194,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				C8C844992E61472700D17A2A /* PBXTargetDependency */,
+				C8C844972E6145A900D17A2A /* PBXTargetDependency */,
 			);
 			name = HitTips;
 			productName = HitTips;
@@ -225,6 +229,8 @@
 			packageReferences = (
 				C8C8447A2E5E01E500D17A2A /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 				C8C844812E5E5B9300D17A2A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C8C8448C2E613E0F00D17A2A /* XCRemoteSwiftPackageReference "swift-confidential" */,
+				C8C8448F2E613E2300D17A2A /* XCRemoteSwiftPackageReference "swift-confidential-plugin" */,
 			);
 			productRefGroup = C9AE22BF24CBF549003290A0 /* Products */;
 			projectDirPath = "";
@@ -281,6 +287,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C8C844972E6145A900D17A2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = C8C844962E6145A900D17A2A /* ConfidentialKit */;
+		};
+		C8C844992E61472700D17A2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = C8C844982E61472700D17A2A /* Confidential */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C9AE22C724CBF549003290A0 /* Main.storyboard */ = {
@@ -492,6 +509,22 @@
 				minimumVersion = 12.1.0;
 			};
 		};
+		C8C8448C2E613E0F00D17A2A /* XCRemoteSwiftPackageReference "swift-confidential" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/securevale/swift-confidential";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
+		C8C8448F2E613E2300D17A2A /* XCRemoteSwiftPackageReference "swift-confidential-plugin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/securevale/swift-confidential-plugin";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -514,6 +547,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C8C844812E5E5B9300D17A2A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		C8C8448D2E613E0F00D17A2A /* ConfidentialKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8C8448C2E613E0F00D17A2A /* XCRemoteSwiftPackageReference "swift-confidential" */;
+			productName = ConfidentialKit;
+		};
+		C8C844962E6145A900D17A2A /* ConfidentialKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8C8448C2E613E0F00D17A2A /* XCRemoteSwiftPackageReference "swift-confidential" */;
+			productName = ConfidentialKit;
+		};
+		C8C844982E61472700D17A2A /* Confidential */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C8C8448F2E613E2300D17A2A /* XCRemoteSwiftPackageReference "swift-confidential-plugin" */;
+			productName = "plugin:Confidential";
 		};
 /* End XCSwiftPackageProductDependency section */
 

@@ -9,15 +9,10 @@
 import UIKit
 import GoogleMobileAds
 
-protocol ReloadInterstitialAdDelegate {
-    func reloadAd()
-}
-
 class TipDetailViewController: UIViewController {
     
     var tipController: TipController?
     var tip: Tip?
-    var reloadAdDelegate: ReloadInterstitialAdDelegate?
     
     @IBOutlet weak var commentTextView: UITextView!
     @IBOutlet weak var billAmountLabel: UILabel!
@@ -31,10 +26,6 @@ class TipDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        reloadAdDelegate?.reloadAd()
     }
     
     func updateViews() {
@@ -53,12 +44,6 @@ class TipDetailViewController: UIViewController {
             totalBillLabel.text = "$" + String(format: "%.2f", totalBill)
             commentTextView.text = comment
         }
-    }
-}
-
-extension TipDetailViewController: FullScreenContentDelegate {
-    func adDidDismissFullScreenContent(_ ad: any FullScreenPresentingAd) {
-        reloadAdDelegate?.reloadAd()
     }
 }
 

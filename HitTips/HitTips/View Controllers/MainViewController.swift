@@ -37,7 +37,6 @@ class MainViewController: UIViewController, BannerViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        fireStoreManager.fetchAiApiKey()
         billAmountTextField.becomeFirstResponder()
         personAmountPickerView.selectRow(tipController.personAmount.count - 1, inComponent: 0, animated: true)
         tipPercentagePickerView.selectRow(tipController.tipPercentage.count - 11, inComponent: 0, animated: true)
@@ -45,6 +44,7 @@ class MainViewController: UIViewController, BannerViewDelegate {
         addTapGesture()
         setupHomePageGoogleBannerView()
         loadInterstitial()
+        fireStoreManager.saveAdFrequency()
     }
     
     override func viewWillLayoutSubviews() {
@@ -133,9 +133,10 @@ class MainViewController: UIViewController, BannerViewDelegate {
                 
                 loadSpinnerView()
                 
-                self.interstitialAd?.fullScreenContentDelegate = self
-                // Present the ad once it has been loaded.
-                self.interstitialAd?.present(from: self)
+                if fireStoreManager.shouldShowAd() {
+                    self.interstitialAd?.fullScreenContentDelegate = self
+                    self.interstitialAd?.present(from: self)
+                }
                 
                 let tipComment = await tipCommentManager.fetchTipComment(tipPercentage)
                 stopSpinnerView()
@@ -169,7 +170,7 @@ class MainViewController: UIViewController, BannerViewDelegate {
         let detailVC = storyboard.instantiateViewController(withIdentifier: "TipDetailViewController") as! TipDetailViewController
         detailVC.tipController = tipController
         detailVC.tip = self.tip
-        detailVC.reloadAdDelegate = self
+        fireStoreManager.incrementAdCount()
         self.present(detailVC, animated: true)
     }
 
@@ -371,12 +372,7 @@ extension MainViewController: FullScreenContentDelegate {
     func adDidDismissFullScreenContent(_ ad: any FullScreenPresentingAd) {
         navigateToDetailVC()
         loadInterstitial()
-    }
-}
-
-extension MainViewController: ReloadInterstitialAdDelegate {
-    func reloadAd() {
-        loadInterstitial()
+        fireStoreManager.resetAdCount()
     }
 }
 
