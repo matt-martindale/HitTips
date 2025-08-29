@@ -25,7 +25,9 @@ class TipDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateViews()
+        DispatchQueue.main.async {
+            self.updateViews()
+        }
     }
     
     func updateViews() {

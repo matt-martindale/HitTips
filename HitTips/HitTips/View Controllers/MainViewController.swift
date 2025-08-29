@@ -130,21 +130,19 @@ class MainViewController: UIViewController, BannerViewDelegate {
                let party = Int64(personAmountTextField.text ?? ""),
                let pricePerPerson = Double(pricePerPersonTextField.text ?? ""),
                let totalBill = Double(totalAmountTextField.text ?? ""), billAmountTextField.text != "0.00" {
-                
-                loadSpinnerView()
-                
+
                 if fireStoreManager.shouldShowAd() {
                     self.interstitialAd?.fullScreenContentDelegate = self
                     self.interstitialAd?.present(from: self)
                 }
-                
+
+                loadSpinnerView()
                 let tipComment = await tipCommentManager.fetchTipComment(tipPercentage)
                 stopSpinnerView()
                 
                 let newTip = Tip(billAmount: billAmount, party: party, pricePerPerson: pricePerPerson, tipAmount: tipAmount, tipPercentage: tipPercentage, totalBill: totalBill, tipTier: tipComment)
                 self.tip = newTip
                 
-                navigateToDetailVC()
                 let context = CoreDataStack.shared.mainContext
                 
                 do {
@@ -153,7 +151,7 @@ class MainViewController: UIViewController, BannerViewDelegate {
                     NSLog("Error saving context to persistent store")
                     context.reset()
                 }
-                
+                navigateToDetailVC()
             } else {
                 
                 let alertController = UIAlertController(title: "Fill in all fields", message: "\(alertMessages.messages.randomElement() ?? "Smarty-pants")", preferredStyle: .actionSheet)
