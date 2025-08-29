@@ -39,7 +39,8 @@ class MainViewController: UIViewController, BannerViewDelegate {
         super.viewDidLoad()
         billAmountTextField.becomeFirstResponder()
         personAmountPickerView.selectRow(tipController.personAmount.count - 1, inComponent: 0, animated: true)
-        tipPercentagePickerView.selectRow(tipController.tipPercentage.count - 11, inComponent: 0, animated: true)
+        tipPercentagePickerView.selectRow(tipController.fetchTipPercentageFromUserDefaults(forPicker: true), inComponent: 0, animated: true)
+        tipPercentageTextField.text = String(tipController.fetchTipPercentageFromUserDefaults())
         createToolbar()
         addTapGesture()
         setupHomePageGoogleBannerView()
@@ -332,6 +333,7 @@ extension MainViewController: UIPickerViewDelegate, UIPickerViewDataSource {
             }
         } else {
             let value = tipController.tipPercentage[row]
+            tipController.saveTipPercentageToUserDefaults(value)
             tipPercentageTextField.text = String(value)
             updateCalculations()
         }

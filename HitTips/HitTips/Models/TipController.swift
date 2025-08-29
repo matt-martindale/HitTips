@@ -12,6 +12,7 @@ class TipController {
     
     var tip: Tip? = nil
     var commentTier: TipTier? = nil
+    let userDefaults = UserDefaults.standard
     
     var personAmount: [Int] {
         var peopleAmount: [Int] = []
@@ -23,13 +24,7 @@ class TipController {
     
     var tipPercentage: [Int] {
         var tipPercentage: [Int] = []
-        for percent in 5...20 {
-            tipPercentage.append(percent)
-        }
-        for percent in 25...30 where percent % 5 == 0 {
-            tipPercentage.append(percent)
-        }
-        for percent in 40...100 where percent % 10 == 0 {
+        for percent in 1...50 {
             tipPercentage.append(percent)
         }
         return tipPercentage.reversed()
@@ -120,4 +115,14 @@ class TipController {
     func roundDown(oldTotalBill: Double) -> Double {
         return oldTotalBill.rounded(.down)
     }
+    
+    func saveTipPercentageToUserDefaults(_ tipPercentage: Int) {
+        userDefaults.setValue(tipPercentage, forKey: "tipPercentage")
+    }
+    
+    func fetchTipPercentageFromUserDefaults(forPicker: Bool = false) -> Int {
+        guard let value = userDefaults.value(forKey: "tipPercentage") as? Int else { return 15 }
+        return forPicker ? (50 - value) : value
+    }
+    
 }
