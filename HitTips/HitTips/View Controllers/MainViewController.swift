@@ -168,7 +168,9 @@ class MainViewController: UIViewController, BannerViewDelegate {
         let detailVC = storyboard.instantiateViewController(withIdentifier: "TipDetailViewController") as! TipDetailViewController
         detailVC.tipController = tipController
         detailVC.tip = self.tip
+        detailVC.interstitialAdDelegate = self
         fireStoreManager.incrementAdCount()
+        print(fireStoreManager.fetchAdCountFromUserDefaults())
         self.present(detailVC, animated: true)
     }
 
@@ -371,6 +373,12 @@ extension MainViewController: FullScreenContentDelegate {
         navigateToDetailVC()
         loadInterstitial()
         fireStoreManager.resetAdCount()
+    }
+}
+
+extension MainViewController: RefreshInterstitialAdDelegate {
+    func refreshInterstitialAd() {
+        loadInterstitial()
     }
 }
 

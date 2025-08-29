@@ -9,10 +9,15 @@
 import UIKit
 import GoogleMobileAds
 
+protocol RefreshInterstitialAdDelegate {
+    func refreshInterstitialAd()
+}
+
 class TipDetailViewController: UIViewController {
     
     var tipController: TipController?
     var tip: Tip?
+    var interstitialAdDelegate: RefreshInterstitialAdDelegate?
     
     @IBOutlet weak var commentTextView: UITextView!
     @IBOutlet weak var billAmountLabel: UILabel!
@@ -28,6 +33,10 @@ class TipDetailViewController: UIViewController {
         DispatchQueue.main.async {
             self.updateViews()
         }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        interstitialAdDelegate?.refreshInterstitialAd()
     }
     
     func updateViews() {
