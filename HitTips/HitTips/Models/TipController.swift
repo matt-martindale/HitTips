@@ -24,7 +24,7 @@ class TipController {
     
     var tipPercentage: [Int] {
         var tipPercentage: [Int] = []
-        for percent in 1...50 {
+        for percent in 1...40 {
             tipPercentage.append(percent)
         }
         return tipPercentage.reversed()
@@ -121,8 +121,8 @@ class TipController {
     }
     
     func fetchTipPercentageFromUserDefaults(forPicker: Bool = false) -> Int {
-        guard let value = userDefaults.value(forKey: "tipPercentage") as? Int else { return 15 }
-        return forPicker ? (50 - value) : value
+        guard let value = userDefaults.value(forKey: "tipPercentage") as? Int else { return 20 }
+        return forPicker ? (40 - value) : value
     }
     
 }

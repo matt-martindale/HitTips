@@ -14,7 +14,7 @@ class RequestBuilder {
     func buildRequest(prompt: String, url: URL?) -> URLRequest? {
         guard let apiUrl = url else { return nil }
         let userDefaults = UserDefaults.standard
-        let aiModel = userDefaults.value(forKey: "aiModel") as! String
+        let aiModel = (userDefaults.value(forKey: "aiModel") as? String) ?? "gpt-4o-mini"
         
         var request = URLRequest(url: apiUrl)
         request.httpMethod = "POST"

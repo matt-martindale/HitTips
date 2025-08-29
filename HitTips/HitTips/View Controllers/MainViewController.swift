@@ -368,6 +368,13 @@ extension MainViewController: UITextFieldDelegate {
 
         return updatedText.count <= 3
     }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let intValue = Int(textField.text ?? "") else { return }
+        let numberOfRows = tipPercentagePickerView.numberOfRows(inComponent: 0)
+        guard numberOfRows > (40 - intValue) && intValue <= 40 else { return }
+        tipPercentagePickerView.selectRow((40 - intValue), inComponent: 0, animated: true)
+    }
 }
 
 extension MainViewController: FullScreenContentDelegate {
