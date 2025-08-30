@@ -81,8 +81,6 @@ class MainViewController: UIViewController, BannerViewDelegate {
         personAmountTextField.layer.cornerRadius = 10
         personAmountTextField.layer.masksToBounds = true
         
-        
-        
         calculateTipButton.layer.cornerRadius = 10
         calculateTipButton.layer.masksToBounds = true
     }
@@ -109,7 +107,6 @@ class MainViewController: UIViewController, BannerViewDelegate {
                 print("Failed to load interstitial ad with error: \(error.localizedDescription)")
                 return
             }
-            // Ad was loaded successfully. Assign it and set the delegate.
             self.interstitialAd = ad
         }
     }
@@ -267,8 +264,9 @@ class MainViewController: UIViewController, BannerViewDelegate {
         toolbar.sizeToFit()
         
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(MainViewController.dismissKeyboard))
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
-        toolbar.setItems([doneButton], animated: true)
+        toolbar.setItems([flexibleSpace, doneButton], animated: true)
         toolbar.isUserInteractionEnabled = true
         
         billAmountTextField.inputAccessoryView = toolbar
