@@ -380,6 +380,7 @@ extension MainViewController: UITextFieldDelegate {
         case 2:
             let numberOfRows = tipPercentagePickerView.numberOfRows(inComponent: 0)
             guard numberOfRows > (numberOfRows - intValue) && intValue <= numberOfRows else { return }
+            tipController.saveTipPercentageToUserDefaults(intValue)
             tipPercentagePickerView.selectRow((numberOfRows - intValue), inComponent: 0, animated: true)
         default:
             break
