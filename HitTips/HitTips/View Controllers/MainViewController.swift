@@ -371,9 +371,19 @@ extension MainViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let intValue = Int(textField.text ?? "") else { return }
-        let numberOfRows = tipPercentagePickerView.numberOfRows(inComponent: 0)
-        guard numberOfRows > (40 - intValue) && intValue <= 40 else { return }
-        tipPercentagePickerView.selectRow((40 - intValue), inComponent: 0, animated: true)
+        
+        switch textField.tag {
+        case 1:
+            let numberOfRows = personAmountPickerView.numberOfRows(inComponent: 0)
+            guard numberOfRows >= (intValue) && intValue > 0 else { return }
+            personAmountPickerView.selectRow((numberOfRows - intValue), inComponent: 0, animated: true)
+        case 2:
+            let numberOfRows = tipPercentagePickerView.numberOfRows(inComponent: 0)
+            guard numberOfRows > (numberOfRows - intValue) && intValue <= numberOfRows else { return }
+            tipPercentagePickerView.selectRow((numberOfRows - intValue), inComponent: 0, animated: true)
+        default:
+            break
+        }
     }
 }
 

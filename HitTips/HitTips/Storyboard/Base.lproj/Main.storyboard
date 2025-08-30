@@ -95,7 +95,7 @@
                                                             </preferredSymbolConfiguration>
                                                         </state>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="Tpy-Xi-bZl">
+                                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="Tpy-Xi-bZl">
                                                         <rect key="frame" x="23" y="0.0" width="47" height="55"/>
                                                         <color key="backgroundColor" red="0.078431372549019607" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
@@ -180,7 +180,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8aT-Ey-2nu">
                                                 <rect key="frame" x="0.0" y="120" width="70" height="55"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15" borderStyle="roundedRect" textAlignment="right" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zNB-Yg-eBU">
+                                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15" borderStyle="roundedRect" textAlignment="right" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zNB-Yg-eBU">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="55"/>
                                                         <color key="backgroundColor" red="0.078431372549019607" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
