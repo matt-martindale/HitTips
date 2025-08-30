@@ -39,8 +39,8 @@ class MainViewController: UIViewController, BannerViewDelegate {
         super.viewDidLoad()
         billAmountTextField.becomeFirstResponder()
         personAmountPickerView.selectRow(tipController.personAmount.count - 1, inComponent: 0, animated: true)
-        tipPercentagePickerView.selectRow(tipController.fetchTipPercentageFromUserDefaults(forPicker: true), inComponent: 0, animated: true)
         tipPercentageTextField.text = String(tipController.fetchTipPercentageFromUserDefaults())
+        updateTipPercentPickerView(tipPercentage: tipController.fetchTipPercentageFromUserDefaults())
         createToolbar()
         addTapGesture()
         setupHomePageGoogleBannerView()
@@ -209,6 +209,13 @@ class MainViewController: UIViewController, BannerViewDelegate {
     }
     
     // MARK: -Functions
+    func updateTipPercentPickerView(tipPercentage: Int) {
+        let numberOfRows = tipPercentagePickerView.numberOfRows(inComponent: 0)
+        guard numberOfRows > (numberOfRows - tipPercentage) && tipPercentage <= numberOfRows else { return }
+        tipController.saveTipPercentageToUserDefaults(tipPercentage)
+        tipPercentagePickerView.selectRow((numberOfRows - tipPercentage), inComponent: 0, animated: true)
+    }
+    
     func updateCalculations() {
         if let billAmount = Double(billAmountTextField.text ?? ""),
             let tipPercentage = tipPercentageTextField.text,
@@ -250,6 +257,8 @@ class MainViewController: UIViewController, BannerViewDelegate {
             let newTip = newTipPercentage * 100
             let roundedNewTip = Int(newTip.rounded())
             tipPercentageTextField.text = String(roundedNewTip)
+            tipController.saveTipPercentageToUserDefaults(roundedNewTip)
+            updateTipPercentPickerView(tipPercentage: roundedNewTip)
         }
     }
     
@@ -378,10 +387,7 @@ extension MainViewController: UITextFieldDelegate {
             guard numberOfRows >= (intValue) && intValue > 0 else { return }
             personAmountPickerView.selectRow((numberOfRows - intValue), inComponent: 0, animated: true)
         case 2:
-            let numberOfRows = tipPercentagePickerView.numberOfRows(inComponent: 0)
-            guard numberOfRows > (numberOfRows - intValue) && intValue <= numberOfRows else { return }
-            tipController.saveTipPercentageToUserDefaults(intValue)
-            tipPercentagePickerView.selectRow((numberOfRows - intValue), inComponent: 0, animated: true)
+            updateTipPercentPickerView(tipPercentage: intValue)
         default:
             break
         }
