@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -288,12 +289,13 @@
                                                                         <textInputTraits key="textInputTraits"/>
                                                                     </textField>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" verticalHuggingPriority="1" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2b5-Bv-SIz">
-                                                                        <rect key="frame" x="149.66666666666666" y="14.333333333333318" width="30" height="59.333333333333343"/>
+                                                                        <rect key="frame" x="149.66666666666666" y="9" width="30" height="70"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2hI-Tj-sE4">
-                                                                                <rect key="frame" x="2.3333333333333144" y="0.0" width="25.333333333333332" height="24.666666666666668"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                                                 <color key="tintColor" red="0.31764705882352939" green="0.6705882352941176" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                                <state key="normal" image="arrow.up.square.fill" catalog="system">
+                                                                                <state key="normal">
+                                                                                    <imageReference key="image" image="arrow.up.square.fill" catalog="system" symbolScale="large"/>
                                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
                                                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                                                                     </preferredSymbolConfiguration>
@@ -303,9 +305,10 @@
                                                                                 </connections>
                                                                             </button>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ol8-qQ-aTS">
-                                                                                <rect key="frame" x="2.3333333333333144" y="34.666666666666686" width="25.333333333333332" height="24.666666666666671"/>
+                                                                                <rect key="frame" x="0.0" y="40" width="30" height="30"/>
                                                                                 <color key="tintColor" red="0.92165619134902954" green="0.50880518835482558" blue="0.40534709648403677" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                                <state key="normal" image="arrow.down.square.fill" catalog="system">
+                                                                                <state key="normal">
+                                                                                    <imageReference key="image" image="arrow.down.square.fill" catalog="system" symbolScale="large"/>
                                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
                                                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                                                                     </preferredSymbolConfiguration>
