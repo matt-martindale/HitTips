@@ -87,7 +87,7 @@ class MainViewController: UIViewController, BannerViewDelegate {
     
     func setupHomePageGoogleBannerView() {
         let bannerView = BannerView(adSize: AdSizeBanner)
-        bannerView.adUnitID = Keys.bannerAdUnitTEST
+        bannerView.adUnitID = Keys.homePageAdUnit
         bannerView.rootViewController = self
         bannerView.delegate = self
         bannerView.translatesAutoresizingMaskIntoConstraints = false
@@ -101,7 +101,7 @@ class MainViewController: UIViewController, BannerViewDelegate {
     
     private func loadInterstitial() {
         let request = Request()
-        InterstitialAd.load(with: Keys.interstitialAdUnitTEST, request: request) { [weak self] ad, error in
+        InterstitialAd.load(with: Keys.interstitialAdUnit, request: request) { [weak self] ad, error in
             guard let self = self else { return }
             if let error = error {
                 print("Failed to load interstitial ad with error: \(error.localizedDescription)")
