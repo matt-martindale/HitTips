@@ -20,6 +20,7 @@ class TipDetailViewController: UIViewController {
     var interstitialAdDelegate: RefreshInterstitialAdDelegate?
     
     @IBOutlet weak var headerStackView: UIStackView!
+    @IBOutlet weak var hitTipsLogoStackView: UIStackView!
     @IBOutlet weak var commentTextView: UITextView!
     @IBOutlet weak var billAmountLabel: UILabel!
     @IBOutlet weak var tipAmountLabel: UILabel!
@@ -35,6 +36,7 @@ class TipDetailViewController: UIViewController {
         super.viewDidLoad()
         DispatchQueue.main.async {
             self.setupHeaderButtons()
+            self.setupHeaderLogo()
             self.setupViews()
         }
     }
@@ -52,11 +54,13 @@ class TipDetailViewController: UIViewController {
     
     @objc private func shareButtonTapped() {
         headerStackView.isHidden = true
+        hitTipsLogoStackView.isHidden = false
         UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, UIScreen.main.scale)
         view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
         guard let screenshot = UIGraphicsGetImageFromCurrentImageContext() else { return }
         UIGraphicsEndImageContext()
         headerStackView.isHidden = false
+        hitTipsLogoStackView.isHidden = true
 
 
         // set up activity view controller
@@ -100,6 +104,15 @@ class TipDetailViewController: UIViewController {
         pillView.addArrangedSubview(shareButton)
         pillView.layoutIfNeeded()
         pillView.layer.cornerRadius = (pillView.frame.height / 2)
+    }
+    
+    private func setupHeaderLogo() {
+        hitTipsLogoStackView.isUserInteractionEnabled = false
+        hitTipsLogoStackView.isHidden = true
+        let logoImage = UIImage(named: "HitTipsLogo")
+        let logoImageView = UIImageView(image: logoImage)
+        logoImageView.contentMode = .scaleAspectFit
+        hitTipsLogoStackView.addArrangedSubview(logoImageView)
     }
     
     private func setupIsFavoriteButtonIcon() {

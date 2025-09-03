@@ -421,6 +421,9 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="f1Z-Rb-N8F" userLabel="Header Stack View">
                                 <rect key="frame" x="40" y="47" width="310" height="50"/>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUu-UQ-fCx" userLabel="HitTips logo stack view">
+                                <rect key="frame" x="40" y="47" width="310" height="50"/>
+                            </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eSm-Ro-tNZ">
                                 <rect key="frame" x="40" y="97" width="310" height="455"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -532,8 +535,10 @@
                             <constraint firstItem="eSm-Ro-tNZ" firstAttribute="leading" secondItem="r2r-oW-bQ9" secondAttribute="leading" constant="40" id="4yv-bk-uE6"/>
                             <constraint firstItem="r2r-oW-bQ9" firstAttribute="trailing" secondItem="T9e-WK-xy0" secondAttribute="trailing" constant="60" id="79a-4a-aws"/>
                             <constraint firstItem="XIP-of-qQV" firstAttribute="leading" secondItem="r2r-oW-bQ9" secondAttribute="leading" constant="60" id="7fJ-el-RpU"/>
+                            <constraint firstItem="r2r-oW-bQ9" firstAttribute="trailing" secondItem="gUu-UQ-fCx" secondAttribute="trailing" constant="40" id="A9y-KC-Apt"/>
                             <constraint firstItem="r2r-oW-bQ9" firstAttribute="trailing" secondItem="f1Z-Rb-N8F" secondAttribute="trailing" constant="40" id="HYA-j0-vJr"/>
                             <constraint firstItem="r2r-oW-bQ9" firstAttribute="trailing" secondItem="eSm-Ro-tNZ" secondAttribute="trailing" constant="40" id="Jyh-yq-xsi"/>
+                            <constraint firstItem="eSm-Ro-tNZ" firstAttribute="top" secondItem="gUu-UQ-fCx" secondAttribute="bottom" id="K9X-eO-4gL"/>
                             <constraint firstItem="eSm-Ro-tNZ" firstAttribute="top" secondItem="f1Z-Rb-N8F" secondAttribute="bottom" id="LG8-A0-Sct"/>
                             <constraint firstItem="r2r-oW-bQ9" firstAttribute="bottom" secondItem="T9e-WK-xy0" secondAttribute="bottom" constant="40" id="PNz-wY-FTj"/>
                             <constraint firstItem="f1Z-Rb-N8F" firstAttribute="leading" secondItem="r2r-oW-bQ9" secondAttribute="leading" constant="40" id="QL5-Q7-5n2"/>
@@ -541,13 +546,16 @@
                             <constraint firstItem="r2r-oW-bQ9" firstAttribute="bottom" secondItem="XIP-of-qQV" secondAttribute="bottom" constant="40" id="Sn8-6T-UBu"/>
                             <constraint firstItem="T9e-WK-xy0" firstAttribute="leading" secondItem="r2r-oW-bQ9" secondAttribute="leading" constant="60" id="WoH-eV-1QK"/>
                             <constraint firstItem="r2r-oW-bQ9" firstAttribute="trailing" secondItem="XIP-of-qQV" secondAttribute="trailing" constant="60" id="aR5-fb-jEo"/>
+                            <constraint firstItem="gUu-UQ-fCx" firstAttribute="top" secondItem="r2r-oW-bQ9" secondAttribute="top" id="lxd-hS-ADo"/>
                             <constraint firstItem="XIP-of-qQV" firstAttribute="top" secondItem="eSm-Ro-tNZ" secondAttribute="bottom" constant="30" id="oPt-2h-SQm"/>
+                            <constraint firstItem="gUu-UQ-fCx" firstAttribute="leading" secondItem="r2r-oW-bQ9" secondAttribute="leading" constant="40" id="t6J-6A-tBW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="billAmountLabel" destination="S9p-bw-HxC" id="Z5h-X0-kHa"/>
                         <outlet property="commentTextView" destination="eSm-Ro-tNZ" id="EB4-Rv-EAU"/>
                         <outlet property="headerStackView" destination="f1Z-Rb-N8F" id="KaE-cR-akG"/>
+                        <outlet property="hitTipsLogoStackView" destination="gUu-UQ-fCx" id="xgr-oA-CbL"/>
                         <outlet property="partyLabel" destination="B84-I4-lmA" id="G1d-c9-8Qk"/>
                         <outlet property="pricePerPersonLabel" destination="Chr-t8-16Y" id="jSP-0m-ZLI"/>
                         <outlet property="tipAmountLabel" destination="dYw-yG-IEK" id="IB9-Ex-Ru2"/>
@@ -871,12 +879,22 @@
                                     <constraint firstAttribute="height" constant="50" id="qcS-wt-cOw"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrw-NY-S0o" userLabel="HitTips stack View">
+                                <rect key="frame" x="40" y="91" width="310" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0gU-IU-119"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rMO-zV-7dz"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="rrw-NY-S0o" firstAttribute="leading" secondItem="rMO-zV-7dz" secondAttribute="leading" constant="40" id="7QV-1m-Cxt"/>
                             <constraint firstItem="rMO-zV-7dz" firstAttribute="trailing" secondItem="y4h-rM-AOJ" secondAttribute="trailing" constant="60" id="CuO-Dt-tLd"/>
+                            <constraint firstItem="WQD-gl-w9O" firstAttribute="top" secondItem="rrw-NY-S0o" secondAttribute="bottom" id="ER0-Wt-TEC"/>
+                            <constraint firstItem="rrw-NY-S0o" firstAttribute="top" secondItem="rMO-zV-7dz" secondAttribute="top" id="Eip-y5-FiE"/>
                             <constraint firstItem="rMO-zV-7dz" firstAttribute="trailing" secondItem="WQD-gl-w9O" secondAttribute="trailing" constant="40" id="JL4-mw-Paa"/>
+                            <constraint firstItem="rMO-zV-7dz" firstAttribute="trailing" secondItem="rrw-NY-S0o" secondAttribute="trailing" constant="40" id="Jhh-eP-0Vn"/>
                             <constraint firstAttribute="trailing" secondItem="KO6-Zc-8Ek" secondAttribute="trailing" constant="40" id="NT6-ET-KMd"/>
                             <constraint firstItem="uJc-vf-mZQ" firstAttribute="leading" secondItem="rMO-zV-7dz" secondAttribute="leading" constant="60" id="RiW-Fh-b1U"/>
                             <constraint firstItem="rMO-zV-7dz" firstAttribute="trailing" secondItem="uJc-vf-mZQ" secondAttribute="trailing" constant="60" id="VNG-8J-rkA"/>
@@ -895,6 +913,7 @@
                         <outlet property="billAmountLabel" destination="b6i-xA-dWh" id="OQ4-nf-Y01"/>
                         <outlet property="commentTextView" destination="WQD-gl-w9O" id="AS1-v1-fYL"/>
                         <outlet property="headerStackView" destination="KO6-Zc-8Ek" id="bSf-co-dn7"/>
+                        <outlet property="hitTipsLogoStackView" destination="rrw-NY-S0o" id="IGT-CF-CAt"/>
                         <outlet property="partyLabel" destination="21P-5v-6iv" id="FcU-xT-QdP"/>
                         <outlet property="pricePerPersonLabel" destination="X7I-7v-ygp" id="L1d-ki-aYg"/>
                         <outlet property="tipAmountLabel" destination="Fpf-sJ-EVR" id="2d3-KW-BPp"/>
