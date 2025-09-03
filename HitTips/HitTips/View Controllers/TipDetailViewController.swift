@@ -19,6 +19,7 @@ class TipDetailViewController: UIViewController {
     var tip: Tip?
     var interstitialAdDelegate: RefreshInterstitialAdDelegate?
     
+    @IBOutlet weak var headerStackView: UIStackView!
     @IBOutlet weak var commentTextView: UITextView!
     @IBOutlet weak var billAmountLabel: UILabel!
     @IBOutlet weak var tipAmountLabel: UILabel!
@@ -31,7 +32,8 @@ class TipDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.async {
-            self.updateViews()
+            self.setupIsFavoriteButton()
+            self.setupViews()
         }
     }
     
@@ -39,7 +41,18 @@ class TipDetailViewController: UIViewController {
         interstitialAdDelegate?.refreshInterstitialAd()
     }
     
-    func updateViews() {
+    private func setupIsFavoriteButton() {
+        let favoriteButton = UIButton(type: .system)
+        if let favoriteIcon = UIImage(systemName: "star") {
+            favoriteButton.setImage(favoriteIcon, for: .normal)
+        }
+        favoriteButton.setTitle(nil, for: .normal)
+        favoriteButton.tintColor = .HTGreen
+        favoriteButton.addTarget(self, action: #selector(favoriteButtonTapped), for: .touchUpInside)
+        headerStackView.addArrangedSubview(favoriteButton)
+    }
+    
+    private func setupViews() {
         guard let tip = tip,
         let comment = tip.tipTier else { return }
         billAmountLabel.text = "$" + String(format: "%.2f", tip.billAmount)
@@ -50,5 +63,10 @@ class TipDetailViewController: UIViewController {
         totalBillLabel.text = "$" + String(format: "%.2f", tip.totalBill)
         commentTextView.text = comment
     }
+    
+    @objc private func favoriteButtonTapped() {
+        print("favorite button tapped")
+    }
+    
 }
 
