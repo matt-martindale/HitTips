@@ -62,7 +62,6 @@ class TipDetailViewController: UIViewController {
         headerStackView.isHidden = false
         hitTipsLogoStackView.isHidden = true
 
-
         // set up activity view controller
         let imageToShare = [screenshot]
         let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
