@@ -755,7 +755,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WQD-gl-w9O">
-                                <rect key="frame" x="40" y="143" width="310" height="372"/>
+                                <rect key="frame" x="40" y="141" width="310" height="374"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="22"/>
@@ -857,8 +857,11 @@
                                     <constraint firstItem="X7I-7v-ygp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="y4h-rM-AOJ" secondAttribute="leading" constant="120" id="fUv-tl-Upg"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KO6-Zc-8Ek" userLabel="header Stack View">
-                                <rect key="frame" x="40" y="93" width="310" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="KO6-Zc-8Ek" userLabel="header Stack View">
+                                <rect key="frame" x="40" y="91" width="310" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qcS-wt-cOw"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rMO-zV-7dz"/>
@@ -872,15 +875,14 @@
                             <constraint firstItem="rMO-zV-7dz" firstAttribute="bottom" secondItem="y4h-rM-AOJ" secondAttribute="bottom" constant="40" id="X8Y-nA-AOl"/>
                             <constraint firstItem="rMO-zV-7dz" firstAttribute="bottom" secondItem="uJc-vf-mZQ" secondAttribute="bottom" constant="40" id="XRM-qE-lhf"/>
                             <constraint firstItem="WQD-gl-w9O" firstAttribute="top" secondItem="KO6-Zc-8Ek" secondAttribute="bottom" id="cC6-p4-LcU"/>
-                            <constraint firstItem="KO6-Zc-8Ek" firstAttribute="top" secondItem="rMO-zV-7dz" secondAttribute="top" constant="-50" id="g5Z-Ij-pqB"/>
+                            <constraint firstItem="KO6-Zc-8Ek" firstAttribute="top" secondItem="rMO-zV-7dz" secondAttribute="top" id="g5Z-Ij-pqB"/>
                             <constraint firstItem="y4h-rM-AOJ" firstAttribute="leading" secondItem="rMO-zV-7dz" secondAttribute="leading" constant="60" id="h94-IH-KSG"/>
                             <constraint firstItem="uJc-vf-mZQ" firstAttribute="top" secondItem="WQD-gl-w9O" secondAttribute="bottom" constant="30" id="iv2-6b-cX8"/>
                             <constraint firstItem="KO6-Zc-8Ek" firstAttribute="leading" secondItem="rCM-3i-ac2" secondAttribute="leading" constant="40" id="tiB-e9-OVU"/>
-                            <constraint firstItem="WQD-gl-w9O" firstAttribute="top" secondItem="rMO-zV-7dz" secondAttribute="top" id="ziM-6D-7l0"/>
                             <constraint firstItem="WQD-gl-w9O" firstAttribute="leading" secondItem="rMO-zV-7dz" secondAttribute="leading" constant="40" id="zqD-QG-c2C"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tY9-lc-cYn"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="tY9-lc-cYn"/>
                     <connections>
                         <outlet property="billAmountLabel" destination="b6i-xA-dWh" id="OQ4-nf-Y01"/>
                         <outlet property="commentTextView" destination="WQD-gl-w9O" id="AS1-v1-fYL"/>

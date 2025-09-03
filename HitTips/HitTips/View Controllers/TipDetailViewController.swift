@@ -42,6 +42,13 @@ class TipDetailViewController: UIViewController {
         interstitialAdDelegate?.refreshInterstitialAd()
     }
     
+    @objc private func favoriteButtonTapped() {
+        guard let tip = tip else { return }
+        tip.isFavorite.toggle()
+        setupIsFavoriteButtonIcon()
+        saveToCoreData()
+    }
+    
     private func setupIsFavoriteButton() {
         setupIsFavoriteButtonIcon()
         favoriteButton.setTitle(nil, for: .normal)
@@ -69,10 +76,15 @@ class TipDetailViewController: UIViewController {
         commentTextView.text = comment
     }
     
-    @objc private func favoriteButtonTapped() {
-        guard let tip = tip else { return }
-        tip.isFavorite.toggle()
-        setupIsFavoriteButtonIcon()
+    private func saveToCoreData() {
+        let context = CoreDataStack.shared.mainContext
+        
+        do {
+            try context.save()
+        } catch {
+            NSLog("Error saving context to persistent store")
+            context.reset()
+        }
     }
     
 }
