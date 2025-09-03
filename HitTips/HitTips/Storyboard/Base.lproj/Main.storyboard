@@ -419,13 +419,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="f1Z-Rb-N8F" userLabel="Header Stack View">
-                                <rect key="frame" x="40" y="47" width="310" height="50"/>
+                                <rect key="frame" x="40" y="67" width="310" height="50"/>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUu-UQ-fCx" userLabel="HitTips logo stack view">
-                                <rect key="frame" x="40" y="47" width="310" height="50"/>
+                                <rect key="frame" x="40" y="67" width="310" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fbh-k3-Qpe"/>
+                                </constraints>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eSm-Ro-tNZ">
-                                <rect key="frame" x="40" y="97" width="310" height="455"/>
+                                <rect key="frame" x="40" y="117" width="310" height="435"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
@@ -531,22 +534,21 @@
                         <viewLayoutGuide key="safeArea" id="r2r-oW-bQ9"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="eSm-Ro-tNZ" firstAttribute="top" secondItem="r2r-oW-bQ9" secondAttribute="top" constant="50" id="2aR-JO-0Ei"/>
+                            <constraint firstItem="eSm-Ro-tNZ" firstAttribute="top" secondItem="r2r-oW-bQ9" secondAttribute="top" constant="70" id="2aR-JO-0Ei"/>
                             <constraint firstItem="eSm-Ro-tNZ" firstAttribute="leading" secondItem="r2r-oW-bQ9" secondAttribute="leading" constant="40" id="4yv-bk-uE6"/>
                             <constraint firstItem="r2r-oW-bQ9" firstAttribute="trailing" secondItem="T9e-WK-xy0" secondAttribute="trailing" constant="60" id="79a-4a-aws"/>
                             <constraint firstItem="XIP-of-qQV" firstAttribute="leading" secondItem="r2r-oW-bQ9" secondAttribute="leading" constant="60" id="7fJ-el-RpU"/>
                             <constraint firstItem="r2r-oW-bQ9" firstAttribute="trailing" secondItem="gUu-UQ-fCx" secondAttribute="trailing" constant="40" id="A9y-KC-Apt"/>
                             <constraint firstItem="r2r-oW-bQ9" firstAttribute="trailing" secondItem="f1Z-Rb-N8F" secondAttribute="trailing" constant="40" id="HYA-j0-vJr"/>
                             <constraint firstItem="r2r-oW-bQ9" firstAttribute="trailing" secondItem="eSm-Ro-tNZ" secondAttribute="trailing" constant="40" id="Jyh-yq-xsi"/>
-                            <constraint firstItem="eSm-Ro-tNZ" firstAttribute="top" secondItem="gUu-UQ-fCx" secondAttribute="bottom" id="K9X-eO-4gL"/>
                             <constraint firstItem="eSm-Ro-tNZ" firstAttribute="top" secondItem="f1Z-Rb-N8F" secondAttribute="bottom" id="LG8-A0-Sct"/>
                             <constraint firstItem="r2r-oW-bQ9" firstAttribute="bottom" secondItem="T9e-WK-xy0" secondAttribute="bottom" constant="40" id="PNz-wY-FTj"/>
                             <constraint firstItem="f1Z-Rb-N8F" firstAttribute="leading" secondItem="r2r-oW-bQ9" secondAttribute="leading" constant="40" id="QL5-Q7-5n2"/>
-                            <constraint firstItem="f1Z-Rb-N8F" firstAttribute="top" secondItem="r2r-oW-bQ9" secondAttribute="top" id="ScG-oi-ydG"/>
+                            <constraint firstItem="f1Z-Rb-N8F" firstAttribute="top" secondItem="r2r-oW-bQ9" secondAttribute="top" constant="20" id="ScG-oi-ydG"/>
                             <constraint firstItem="r2r-oW-bQ9" firstAttribute="bottom" secondItem="XIP-of-qQV" secondAttribute="bottom" constant="40" id="Sn8-6T-UBu"/>
                             <constraint firstItem="T9e-WK-xy0" firstAttribute="leading" secondItem="r2r-oW-bQ9" secondAttribute="leading" constant="60" id="WoH-eV-1QK"/>
                             <constraint firstItem="r2r-oW-bQ9" firstAttribute="trailing" secondItem="XIP-of-qQV" secondAttribute="trailing" constant="60" id="aR5-fb-jEo"/>
-                            <constraint firstItem="gUu-UQ-fCx" firstAttribute="top" secondItem="r2r-oW-bQ9" secondAttribute="top" id="lxd-hS-ADo"/>
+                            <constraint firstItem="gUu-UQ-fCx" firstAttribute="top" secondItem="r2r-oW-bQ9" secondAttribute="top" constant="20" id="lxd-hS-ADo"/>
                             <constraint firstItem="XIP-of-qQV" firstAttribute="top" secondItem="eSm-Ro-tNZ" secondAttribute="bottom" constant="30" id="oPt-2h-SQm"/>
                             <constraint firstItem="gUu-UQ-fCx" firstAttribute="leading" secondItem="r2r-oW-bQ9" secondAttribute="leading" constant="40" id="t6J-6A-tBW"/>
                         </constraints>
@@ -880,9 +882,9 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrw-NY-S0o" userLabel="HitTips stack View">
-                                <rect key="frame" x="40" y="91" width="310" height="50"/>
+                                <rect key="frame" x="40" y="91" width="310" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="0gU-IU-119"/>
+                                    <constraint firstAttribute="height" constant="30" id="0gU-IU-119"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -891,16 +893,15 @@
                         <constraints>
                             <constraint firstItem="rrw-NY-S0o" firstAttribute="leading" secondItem="rMO-zV-7dz" secondAttribute="leading" constant="40" id="7QV-1m-Cxt"/>
                             <constraint firstItem="rMO-zV-7dz" firstAttribute="trailing" secondItem="y4h-rM-AOJ" secondAttribute="trailing" constant="60" id="CuO-Dt-tLd"/>
-                            <constraint firstItem="WQD-gl-w9O" firstAttribute="top" secondItem="rrw-NY-S0o" secondAttribute="bottom" id="ER0-Wt-TEC"/>
                             <constraint firstItem="rrw-NY-S0o" firstAttribute="top" secondItem="rMO-zV-7dz" secondAttribute="top" id="Eip-y5-FiE"/>
                             <constraint firstItem="rMO-zV-7dz" firstAttribute="trailing" secondItem="WQD-gl-w9O" secondAttribute="trailing" constant="40" id="JL4-mw-Paa"/>
                             <constraint firstItem="rMO-zV-7dz" firstAttribute="trailing" secondItem="rrw-NY-S0o" secondAttribute="trailing" constant="40" id="Jhh-eP-0Vn"/>
+                            <constraint firstItem="WQD-gl-w9O" firstAttribute="top" secondItem="rMO-zV-7dz" secondAttribute="top" constant="50" id="L53-CU-6z5"/>
                             <constraint firstAttribute="trailing" secondItem="KO6-Zc-8Ek" secondAttribute="trailing" constant="40" id="NT6-ET-KMd"/>
                             <constraint firstItem="uJc-vf-mZQ" firstAttribute="leading" secondItem="rMO-zV-7dz" secondAttribute="leading" constant="60" id="RiW-Fh-b1U"/>
                             <constraint firstItem="rMO-zV-7dz" firstAttribute="trailing" secondItem="uJc-vf-mZQ" secondAttribute="trailing" constant="60" id="VNG-8J-rkA"/>
                             <constraint firstItem="rMO-zV-7dz" firstAttribute="bottom" secondItem="y4h-rM-AOJ" secondAttribute="bottom" constant="40" id="X8Y-nA-AOl"/>
                             <constraint firstItem="rMO-zV-7dz" firstAttribute="bottom" secondItem="uJc-vf-mZQ" secondAttribute="bottom" constant="40" id="XRM-qE-lhf"/>
-                            <constraint firstItem="WQD-gl-w9O" firstAttribute="top" secondItem="KO6-Zc-8Ek" secondAttribute="bottom" id="cC6-p4-LcU"/>
                             <constraint firstItem="KO6-Zc-8Ek" firstAttribute="top" secondItem="rMO-zV-7dz" secondAttribute="top" id="g5Z-Ij-pqB"/>
                             <constraint firstItem="y4h-rM-AOJ" firstAttribute="leading" secondItem="rMO-zV-7dz" secondAttribute="leading" constant="60" id="h94-IH-KSG"/>
                             <constraint firstItem="uJc-vf-mZQ" firstAttribute="top" secondItem="WQD-gl-w9O" secondAttribute="bottom" constant="30" id="iv2-6b-cX8"/>
