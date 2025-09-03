@@ -27,6 +27,7 @@ class TipDetailViewController: UIViewController {
     @IBOutlet weak var partyLabel: UILabel!
     @IBOutlet weak var pricePerPersonLabel: UILabel!
     @IBOutlet weak var totalBillLabel: UILabel!
+    let favoriteButton = UIButton(type: .system)
     
     
     override func viewDidLoad() {
@@ -42,14 +43,18 @@ class TipDetailViewController: UIViewController {
     }
     
     private func setupIsFavoriteButton() {
-        let favoriteButton = UIButton(type: .system)
-        if let favoriteIcon = UIImage(systemName: "star") {
-            favoriteButton.setImage(favoriteIcon, for: .normal)
-        }
+        setupIsFavoriteButtonIcon()
         favoriteButton.setTitle(nil, for: .normal)
         favoriteButton.tintColor = .HTGreen
         favoriteButton.addTarget(self, action: #selector(favoriteButtonTapped), for: .touchUpInside)
         headerStackView.addArrangedSubview(favoriteButton)
+    }
+    
+    private func setupIsFavoriteButtonIcon() {
+        let favoriteIconName = (tip?.isFavorite ?? false) ? "star.fill" : "star"
+        if let favoriteIcon = UIImage(systemName: favoriteIconName) {
+            favoriteButton.setImage(favoriteIcon, for: .normal)
+        }
     }
     
     private func setupViews() {
@@ -65,7 +70,9 @@ class TipDetailViewController: UIViewController {
     }
     
     @objc private func favoriteButtonTapped() {
-        print("favorite button tapped")
+        guard let tip = tip else { return }
+        tip.isFavorite.toggle()
+        setupIsFavoriteButtonIcon()
     }
     
 }

@@ -857,18 +857,25 @@
                                     <constraint firstItem="X7I-7v-ygp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="y4h-rM-AOJ" secondAttribute="leading" constant="120" id="fUv-tl-Upg"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KO6-Zc-8Ek" userLabel="header Stack View">
+                                <rect key="frame" x="40" y="93" width="310" height="50"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rMO-zV-7dz"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rMO-zV-7dz" firstAttribute="trailing" secondItem="y4h-rM-AOJ" secondAttribute="trailing" constant="60" id="CuO-Dt-tLd"/>
                             <constraint firstItem="rMO-zV-7dz" firstAttribute="trailing" secondItem="WQD-gl-w9O" secondAttribute="trailing" constant="40" id="JL4-mw-Paa"/>
+                            <constraint firstAttribute="trailing" secondItem="KO6-Zc-8Ek" secondAttribute="trailing" constant="40" id="NT6-ET-KMd"/>
                             <constraint firstItem="uJc-vf-mZQ" firstAttribute="leading" secondItem="rMO-zV-7dz" secondAttribute="leading" constant="60" id="RiW-Fh-b1U"/>
                             <constraint firstItem="rMO-zV-7dz" firstAttribute="trailing" secondItem="uJc-vf-mZQ" secondAttribute="trailing" constant="60" id="VNG-8J-rkA"/>
                             <constraint firstItem="rMO-zV-7dz" firstAttribute="bottom" secondItem="y4h-rM-AOJ" secondAttribute="bottom" constant="40" id="X8Y-nA-AOl"/>
                             <constraint firstItem="rMO-zV-7dz" firstAttribute="bottom" secondItem="uJc-vf-mZQ" secondAttribute="bottom" constant="40" id="XRM-qE-lhf"/>
+                            <constraint firstItem="WQD-gl-w9O" firstAttribute="top" secondItem="KO6-Zc-8Ek" secondAttribute="bottom" id="cC6-p4-LcU"/>
+                            <constraint firstItem="KO6-Zc-8Ek" firstAttribute="top" secondItem="rMO-zV-7dz" secondAttribute="top" constant="-50" id="g5Z-Ij-pqB"/>
                             <constraint firstItem="y4h-rM-AOJ" firstAttribute="leading" secondItem="rMO-zV-7dz" secondAttribute="leading" constant="60" id="h94-IH-KSG"/>
                             <constraint firstItem="uJc-vf-mZQ" firstAttribute="top" secondItem="WQD-gl-w9O" secondAttribute="bottom" constant="30" id="iv2-6b-cX8"/>
+                            <constraint firstItem="KO6-Zc-8Ek" firstAttribute="leading" secondItem="rCM-3i-ac2" secondAttribute="leading" constant="40" id="tiB-e9-OVU"/>
                             <constraint firstItem="WQD-gl-w9O" firstAttribute="top" secondItem="rMO-zV-7dz" secondAttribute="top" id="ziM-6D-7l0"/>
                             <constraint firstItem="WQD-gl-w9O" firstAttribute="leading" secondItem="rMO-zV-7dz" secondAttribute="leading" constant="40" id="zqD-QG-c2C"/>
                         </constraints>
@@ -877,6 +884,7 @@
                     <connections>
                         <outlet property="billAmountLabel" destination="b6i-xA-dWh" id="OQ4-nf-Y01"/>
                         <outlet property="commentTextView" destination="WQD-gl-w9O" id="AS1-v1-fYL"/>
+                        <outlet property="headerStackView" destination="KO6-Zc-8Ek" id="bSf-co-dn7"/>
                         <outlet property="partyLabel" destination="21P-5v-6iv" id="FcU-xT-QdP"/>
                         <outlet property="pricePerPersonLabel" destination="X7I-7v-ygp" id="L1d-ki-aYg"/>
                         <outlet property="tipAmountLabel" destination="Fpf-sJ-EVR" id="2d3-KW-BPp"/>
@@ -886,7 +894,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOA-Kj-sSR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2746" y="834"/>
+            <point key="canvasLocation" x="2743.0769230769229" y="833.88625592417054"/>
         </scene>
     </scenes>
     <resources>
