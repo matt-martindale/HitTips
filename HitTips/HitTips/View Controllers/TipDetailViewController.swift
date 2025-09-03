@@ -52,13 +52,13 @@ class TipDetailViewController: UIViewController {
     private func setupIsFavoriteButton() {
         setupIsFavoriteButtonIcon()
         favoriteButton.setTitle(nil, for: .normal)
-        favoriteButton.tintColor = .HTGreen
+        favoriteButton.tintColor = .HTRed
         favoriteButton.addTarget(self, action: #selector(favoriteButtonTapped), for: .touchUpInside)
         headerStackView.addArrangedSubview(favoriteButton)
     }
     
     private func setupIsFavoriteButtonIcon() {
-        let favoriteIconName = (tip?.isFavorite ?? false) ? "star.fill" : "star"
+        let favoriteIconName = (tip?.isFavorite ?? false) ? "heart.fill" : "heart"
         if let favoriteIcon = UIImage(systemName: favoriteIconName) {
             favoriteButton.setImage(favoriteIcon, for: .normal)
         }

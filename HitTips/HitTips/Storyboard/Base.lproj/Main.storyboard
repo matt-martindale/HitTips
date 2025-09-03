@@ -306,7 +306,7 @@
                                                                             </button>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ol8-qQ-aTS">
                                                                                 <rect key="frame" x="0.0" y="40" width="30" height="30"/>
-                                                                                <color key="tintColor" red="0.92165619134902954" green="0.50880518835482558" blue="0.40534709648403677" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                <color key="tintColor" red="0.92156862745098034" green="0.50980392156862742" blue="0.40392156862745099" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                                 <state key="normal">
                                                                                     <imageReference key="image" image="arrow.down.square.fill" catalog="system" symbolScale="large"/>
                                                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
