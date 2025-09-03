@@ -31,18 +31,20 @@ extension Tip {
         totalBill: Double,
         tipTier: String,
         identifier: UUID = UUID(),
+        isFavorite: Bool = false,
         context: NSManagedObjectContext = CoreDataStack.shared.mainContext) {
-        
-        self.init(context: context)
-        
-        self.billAmount = billAmount
-        self.date = date
-        self.party = party
-        self.pricePerPerson = pricePerPerson
-        self.tipAmount = tipAmount
-        self.tipPercentage = tipPercentage
-        self.totalBill = totalBill
-        self.tipTier = tipTier
-        self.identifier = identifier
-    }
+            
+            self.init(context: context)
+            
+            self.billAmount = billAmount
+            self.date = date
+            self.party = party
+            self.pricePerPerson = pricePerPerson
+            self.tipAmount = tipAmount
+            self.tipPercentage = tipPercentage
+            self.totalBill = totalBill
+            self.tipTier = tipTier
+            self.identifier = identifier
+            self.isFavorite = isFavorite
+        }
 }

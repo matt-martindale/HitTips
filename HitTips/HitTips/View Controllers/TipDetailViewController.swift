@@ -40,21 +40,15 @@ class TipDetailViewController: UIViewController {
     }
     
     func updateViews() {
-        if let billAmount = tip?.billAmount,
-           let tipAmount = tip?.tipAmount,
-           let tipPercentage = tip?.tipPercentage,
-           let party = tip?.party,
-           let pricerPerPerson = tip?.pricePerPerson,
-           let totalBill = tip?.totalBill,
-           let comment = tip?.tipTier {
-            billAmountLabel.text = "$" + String(format: "%.2f", billAmount)
-            tipAmountLabel.text = "$" + String(format: "%.2f", tipAmount)
-            tipPercentageLabel.text = String(tipPercentage) + "%"
-            partyLabel.text = String(party)
-            pricePerPersonLabel.text = "$" + String(format: "%.2f", pricerPerPerson)
-            totalBillLabel.text = "$" + String(format: "%.2f", totalBill)
-            commentTextView.text = comment
-        }
+        guard let tip = tip,
+        let comment = tip.tipTier else { return }
+        billAmountLabel.text = "$" + String(format: "%.2f", tip.billAmount)
+        tipAmountLabel.text = "$" + String(format: "%.2f", tip.tipAmount)
+        tipPercentageLabel.text = String(tip.tipPercentage) + "%"
+        partyLabel.text = String(tip.party)
+        pricePerPersonLabel.text = "$" + String(format: "%.2f", tip.pricePerPerson)
+        totalBillLabel.text = "$" + String(format: "%.2f", tip.totalBill)
+        commentTextView.text = comment
     }
 }
 
