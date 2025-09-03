@@ -18,6 +18,7 @@ class HistoryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var totalBillLabel: UILabel!
+    @IBOutlet weak var favoriteImageView: UIImageView!
     @IBOutlet weak var tipPercentLabel: UILabel!
     
     func updateView() {
@@ -25,6 +26,8 @@ class HistoryTableViewCell: UITableViewCell {
             dateLabel.text = tip.date?.toString()
             totalBillLabel.text = "$" + String(format: "%.2f", tip.totalBill)
             tipPercentLabel.text = String(tip.tipPercentage) + "%"
+            favoriteImageView.image = tip.isFavorite ? UIImage(systemName: "heart.fill") : nil
+            favoriteImageView.tintColor = .HTRed
         }
     }
     
