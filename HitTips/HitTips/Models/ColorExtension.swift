@@ -11,4 +11,5 @@ import UIKit
 extension UIColor {
     static let HTGreen = UIColor(named: "HTGreen")
     static let HTRed = UIColor(named: "HTRed")
+    static let HTDarkGray = UIColor(named: "HTDarkGray")
 }

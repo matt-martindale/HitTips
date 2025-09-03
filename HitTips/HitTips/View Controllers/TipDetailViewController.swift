@@ -28,12 +28,13 @@ class TipDetailViewController: UIViewController {
     @IBOutlet weak var pricePerPersonLabel: UILabel!
     @IBOutlet weak var totalBillLabel: UILabel!
     let favoriteButton = UIButton(type: .system)
+    let shareButton = UIButton(type: .system)
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.async {
-            self.setupIsFavoriteButton()
+            self.setupHeaderButtons()
             self.setupViews()
         }
     }
@@ -49,12 +50,56 @@ class TipDetailViewController: UIViewController {
         saveToCoreData()
     }
     
-    private func setupIsFavoriteButton() {
+    @objc private func shareButtonTapped() {
+        headerStackView.isHidden = true
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, UIScreen.main.scale)
+        view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
+        guard let screenshot = UIGraphicsGetImageFromCurrentImageContext() else { return }
+        UIGraphicsEndImageContext()
+        headerStackView.isHidden = false
+
+
+        // set up activity view controller
+        let imageToShare = [screenshot]
+        let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+
+        // present the view controller
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
+    private func setupHeaderButtons() {
+        // Setup spacer view
+        let spacerView = UIView()
+        spacerView.setContentHuggingPriority(.defaultLow, for: .horizontal)
+        headerStackView.addArrangedSubview(spacerView)
+        
+        // Setup pill view
+        let pillView = UIStackView()
+        pillView.axis = .horizontal
+        pillView.spacing = 0
+        pillView.backgroundColor = .HTDarkGray
+        pillView.clipsToBounds = true
+        headerStackView.addArrangedSubview(pillView)
+        
+        // Setup favorite button
         setupIsFavoriteButtonIcon()
         favoriteButton.setTitle(nil, for: .normal)
         favoriteButton.tintColor = .HTRed
+        favoriteButton.contentEdgeInsets = UIEdgeInsets(top: 4, left: 10, bottom: 4, right: 4)
         favoriteButton.addTarget(self, action: #selector(favoriteButtonTapped), for: .touchUpInside)
-        headerStackView.addArrangedSubview(favoriteButton)
+        pillView.addArrangedSubview(favoriteButton)
+        
+        // Setup share button
+        shareButton.setTitle(nil, for: .normal)
+        shareButton.tintColor = .white
+        shareButton.contentEdgeInsets = UIEdgeInsets(top: 4, left: 4, bottom: 8, right: 12)
+        let config = UIImage.SymbolConfiguration(pointSize: 20, weight: .light, scale: .default)
+        shareButton.setImage(UIImage(systemName: "square.and.arrow.up", withConfiguration: config), for: .normal)
+        shareButton.addTarget(self, action: #selector(shareButtonTapped), for: .touchUpInside)
+        pillView.addArrangedSubview(shareButton)
+        pillView.layoutIfNeeded()
+        pillView.layer.cornerRadius = (pillView.frame.height / 2)
     }
     
     private func setupIsFavoriteButtonIcon() {
