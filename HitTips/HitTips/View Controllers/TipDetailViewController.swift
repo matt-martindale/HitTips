@@ -38,6 +38,24 @@ class TipDetailViewController: UIViewController {
             self.setupHeaderButtons()
             self.setupHeaderLogo()
             self.setupViews()
+            let expandingButton = ExpandingButton(frame: .zero)
+            expandingButton.translatesAutoresizingMaskIntoConstraints = false
+            self.view.addSubview(expandingButton)
+            
+            // Use an existing layout guide to ensure proper spacing
+            let safeArea = self.view.safeAreaLayoutGuide
+            
+            // Define the maximum possible size for the expanding button's container
+            // and place it in the top-right corner.
+            NSLayoutConstraint.activate([
+                expandingButton.trailingAnchor.constraint(equalTo: safeArea.trailingAnchor, constant: -20),
+                expandingButton.topAnchor.constraint(equalTo: safeArea.topAnchor, constant: 80),
+                
+                // Explicitly set the width and height of the ExpandingButton container
+                // to accommodate the largest state of the expanded view.
+                expandingButton.widthAnchor.constraint(equalToConstant: expandingButton.expandedWidth),
+                expandingButton.heightAnchor.constraint(equalToConstant: expandingButton.expandedHeight)
+            ])
         }
     }
     

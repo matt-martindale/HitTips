@@ -21,6 +21,7 @@
 		C8C844872E5E5B9300D17A2A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C8C844862E5E5B9300D17A2A /* FirebaseFirestore */; };
 		C8C844892E5E5D0A00D17A2A /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C844882E5E5D0A00D17A2A /* FirestoreManager.swift */; };
 		C8C8448E2E613E0F00D17A2A /* ConfidentialKit in Frameworks */ = {isa = PBXBuildFile; productRef = C8C8448D2E613E0F00D17A2A /* ConfidentialKit */; };
+		C8F5D7D92E6939EF00CCD02D /* ExpandingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F5D7D82E6939EF00CCD02D /* ExpandingButton.swift */; };
 		C8FC25262E67EFF700C50FBA /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FC25252E67EFF700C50FBA /* ColorExtension.swift */; };
 		C9AE22C224CBF549003290A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22C124CBF549003290A0 /* AppDelegate.swift */; };
 		C9AE22C424CBF549003290A0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AE22C324CBF549003290A0 /* SceneDelegate.swift */; };
@@ -52,6 +53,7 @@
 		C8C8447D2E5E21BA00D17A2A /* StringSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringSettings.swift; sourceTree = "<group>"; };
 		C8C8447F2E5E5B3500D17A2A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C8C844882E5E5D0A00D17A2A /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		C8F5D7D82E6939EF00CCD02D /* ExpandingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandingButton.swift; sourceTree = "<group>"; };
 		C8FC25252E67EFF700C50FBA /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		C9AE22BE24CBF549003290A0 /* HitTips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitTips.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AE22C124CBF549003290A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				C8C844762E5C170D00D17A2A /* Keys.swift */,
 				C8C8447D2E5E21BA00D17A2A /* StringSettings.swift */,
 				C8FC25252E67EFF700C50FBA /* ColorExtension.swift */,
+				C8F5D7D82E6939EF00CCD02D /* ExpandingButton.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				C8C844892E5E5D0A00D17A2A /* FirestoreManager.swift in Sources */,
 				C8C844752E5C16ED00D17A2A /* RequestBuilder.swift in Sources */,
 				C8C844712E5C16B500D17A2A /* AIService.swift in Sources */,
+				C8F5D7D92E6939EF00CCD02D /* ExpandingButton.swift in Sources */,
 				C8FC25262E67EFF700C50FBA /* ColorExtension.swift in Sources */,
 				C9AE22EC24CBF90D003290A0 /* Date+Formatter.swift in Sources */,
 				C9AE22EE24CBF90D003290A0 /* Tip+Convenience.swift in Sources */,
